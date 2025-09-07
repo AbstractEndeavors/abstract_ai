@@ -1,0 +1,8 @@
+ in the script: src/abstract_ai/gpt_classes/class_test/classes.py
+ dubbed with the title: abstract_ai_module_response_management_tests
+ was described as: The provided script appears to part of a test suite for the abstract_ai Python module, specifically focusing on response management. This involves a variety of classes and methods that work together to handle and manage API call responses from the GPT-3 AI. Chief among these is the ResponseManager class which appears to deal with generating and managing API call responses. 
+
+There are methods for generating new API call names, managing an asynchronous event loop for queries, handling future results from API calls, submitting events and queries, updating progress visuals in the UI, checking if the Response Manager has completed the query process, and one for managing the process of submitting queries to the GPT AI. Event and query handlers also play a pivotal role in managing and controlling the flow of requests and responses. 
+
+In summary, this chunk of the script ensures the response results from the GPT-3 AI are correctly processed, handled, and presented. It also handles exception handling, logging, and status updates for the response management process.
+

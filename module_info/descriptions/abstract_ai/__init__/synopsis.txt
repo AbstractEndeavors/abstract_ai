@@ -1,0 +1,4 @@
+ in the script: src/abstract_ai/__init__.py
+ dubbed with the title: abstract_ai_module_initializer
+ was described as: The provided script serves as an initializer for the 'abstract_ai' module, importing necessary classes and functions to enable the functionalities of the module. Key components imported include 'ApiManager', 'ModelManager', 'PromptManager', 'ResponseManager', and 'InstructionManager' which are responsible for controlling different aspects of interacting with the OpenAI GPT-3 API. Additionally, the module includes functionalities for setup and querying without a GUI, as well as for interaction with a database and an abstract AI GUI.
+

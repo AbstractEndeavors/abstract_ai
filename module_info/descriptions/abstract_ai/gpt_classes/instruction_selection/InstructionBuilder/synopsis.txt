@@ -1,0 +1,4 @@
+ in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder.py
+ dubbed with the title: Abstract_AI_InstructionBuilder_Module_Description
+ was described as: The script "InstructionBuilder.py" in Abstract_AI Python module contains a class "InstructionManager" which is used for managing user's instructions. This includes a set of default instructions and methods for handling and utilizing these instructions such as creating new instructions, updating existing ones, getting the current instructions and adding new ones. The instructions consist of instructions text, example values, and a default state of execution. This utility seems to be the core part of structuring user’s responses in a specified format and controlling the API call behavior.
+

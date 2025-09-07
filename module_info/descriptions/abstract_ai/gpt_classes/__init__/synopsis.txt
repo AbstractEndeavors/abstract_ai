@@ -1,0 +1,8 @@
+ in the script: src/abstract_ai/gpt_classes/__init__.py
+ dubbed with the title: abstract_ai_module_gpt_classes_initializer
+ was described as: The script provided serves as the initializer for the 'gpt_classes' submodule within the 'abstract_ai' module. It is responsible for setting up the different classes that interact with and control the behavior of the OpenAI GPT-3 API. Each imported file corresponds to a specific class.
+
+The 'response_selection' manages the response handling logic, while 'prompt_selection' is responsible for establishing prompts. The 'model_selection' sets up the models to be used, and 'instruction_selection' sets up the instructions to control queries. The 'api_selection' file sets up the API manager, while 'nogui_selection' provides functionalities for setup and querying without a GUI.
+
+In summary, this script serves to unify the different components for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module, streamlining the process of sending requests, managing responses, and controlling the behavior of the API calls.
+

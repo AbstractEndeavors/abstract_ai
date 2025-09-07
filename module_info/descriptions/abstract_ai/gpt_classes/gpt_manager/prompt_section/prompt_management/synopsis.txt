@@ -1,0 +1,4 @@
+ in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/prompt_management.py
+ dubbed with the title: abstract_ai_module_prompt_management_overview
+ was described as: The script 'prompt_management.py' exists within the module 'abstract_ai', primarily serving functions related to the interaction with the OpenAI GPT-3 API. Initiating with dependency imports, the script continues to initialize the prompt manager and prepare it for GPT-3 querying. The script provides a variety of functions that work in conjunction with user interface such as updating request and prompt data lists, checking if events related to prompting or requesting data occurred, managing history events, updating the query display and handling navigation events. Furthermore, the script also facilitates actions like adding user’s request to request chunk, updating chunk data and performing some actions based on specific events in the user interface.
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Multi-File → Python Clipboard Copier</title>
+  <style>
+    /* … your CSS from before … */
+  </style>
+</head>
+<body>
+
+  <h2>Drag-and-Drop Multiple Files → Copy to Python Clipboard</h2>
+
+  <div id="drop-zone">
+    <p>Drop one or more text files here<br>or click “Browse…”</p>
+  </div>
+  <input
+    type="file"
+    id="file-input"
+    accept="text/*"
+    multiple
+  />
+
+  <div id="status">No files selected.</div>
+
+  <script>
+    const dropZone = document.getElementById('drop-zone');
+    const fileInput = document.getElementById('file-input');
+    const statusDiv = document.getElementById('status');
+
+    ['dragenter','dragover','dragleave','drop'].forEach(evt => {
+      dropZone.addEventListener(evt, e => {
+        e.preventDefault();
+        e.stopPropagation();
+      });
+    });
+    ['dragenter','dragover'].forEach(evt => {
+      dropZone.addEventListener(evt, () => dropZone.classList.add('hover'));
+    });
+    ['dragleave','drop'].forEach(evt => {
+      dropZone.addEventListener(evt, () => dropZone.classList.remove('hover'));
+    });
+
+    dropZone.addEventListener('drop', e => {
+      const dtFiles = Array.from(e.dataTransfer.files || []);
+      if (dtFiles.length) processMultipleFiles(dtFiles);
+    });
+
+    fileInput.addEventListener('change', () => {
+      const chosen = Array.from(fileInput.files || []);
+      if (chosen.length) processMultipleFiles(chosen);
+    });
+
+    async function processMultipleFiles(files) {
+      statusDiv.textContent = `Reading ${files.length} file${files.length > 1 ? 's' : ''}…`;
+      try {
+        const readPromises = files.map(file => {
+          if (!file.type.startsWith('text/')) {
+            return Promise.reject(new Error(`"${file.name}" is not a text file.`));
+          }
+          return file.text().then(text => ({ name: file.name, content: text }));
+        });
+        const results = await Promise.all(readPromises);
+
+        let combined = '';
+        results.forEach((fileObj, idx) => {
+          combined += `=== ${fileObj.name} ===\n`;
+          combined += fileObj.content;
+          if (idx < results.length - 1) {
+            combined += `\n\n――――――――――――――――――\n\n`;
+          }
+        });
+
+        const resp = await fetch('http://127.0.0.1:7820/copy', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: combined })
+        });
+        if (!resp.ok) {
+          const err = await resp.json();
+          throw new Error(err.error || resp.statusText);
+        }
+        statusDiv.textContent = `✅ All ${files.length} file${files.length > 1 ? 's' : ''} copied!`;
+      }
+      catch (err) {
+        statusDiv.textContent = `⚠️ Error: ${err.message}`;
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      dropZone.focus();
+    });
+  </script>
+
+</body>
+</html>

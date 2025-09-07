@@ -1,0 +1,4 @@
+ in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_response.py
+ dubbed with the title: abstract_ai_get_output_response_function
+ was described as: The provided script, denoting chunk 1 of 2 from an unidentified file in the 'abstract_ai' Python module, defines the 'get_output_response' method. This method is devised to format the output string of a response in a clear, readable manner. It includes integral information about the model, title, user's request, and the AI's response. The function accepts parameters for 'model', 'title', 'request', 'response', and 'output_files', and formats it in a certain order with appropriate new lines for readability. Once formatted, the output string is returned. This function is likely part of a larger class or module responsible for managing and formatting responses from the OpenAI GPT-3 API.
+

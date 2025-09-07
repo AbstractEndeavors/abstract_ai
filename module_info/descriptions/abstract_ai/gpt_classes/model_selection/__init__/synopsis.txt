@@ -1,0 +1,904 @@
+ in the script: src/abstract_ai/gpt_classes/model_selection/__init__.py
+ dubbed with the title: Short_Title_for_Query'}
+-----------------------------------------------------------------------------
+#prompt#
+
+the data provided is __init__.py from partial path src/abstract_ai/gpt_classes/model_selection/__init__.py in 📦 **abstract_ai** v0.2.1.102
+> abstract_ai is a Python module that serves as a bridge between your application and the OpenAI GPT-3 API. It provides a convenient interface for sending requests, managing responses, and controlling the behavior of the API calls. This module is highly customizable, allowing you to establish prompts, instructions, and response handling logic.
+
+👤 Author: putkoff (partners@abstractendeavors.com)
+🪪 License: Unknown License
+
+🏷️ Classifiers:
+  - Development Status :: 3 - Alpha
+  - Intended Audience :: Developers
+  - License :: OSI Approved :: MIT License
+  - Programming Language :: Python :: 3
+  - Programming Language :: Python :: 3.11
+
+📦 Dependencies:
+  - abstract_database
+  - abstract_security>=0.0.1
+  - abstract_webtools>=0.1.4.90
+  - tiktoken>=0.5.1
+  - abstract_utilities>=0.2.2.1
+  - abstract_gui>=0.0.60.0
+  - pyperclip>=1.8.2
+  - openai>=0.28.1
+  - requests>=2.31.0
+  - nltk>=3.8.1
+  - python-docx
+
+ here is a synopsis of the previous scripts:  in the script: src/abstract_ai/__init__.py
+ dubbed with the title: abstract_ai_module_initializer
+ was described as: The provided script serves as an initializer for the 'abstract_ai' module, importing necessary classes and functions to enable the functionalities of the module. Key components imported include 'ApiManager', 'ModelManager', 'PromptManager', 'ResponseManager', and 'InstructionManager' which are responsible for controlling different aspects of interacting with the OpenAI GPT-3 API. Additionally, the module includes functionalities for setup and querying without a GUI, as well as for interaction with a database and an abstract AI GUI.
+
+/n/n in the script: src/abstract_ai/abstract_ai_gui.py
+ dubbed with the title: abstract_ai_gui_Function_Description
+ was described as: The abstract_ai_gui.py script in the abstract_ai v0.2.1.102 Python module contains a single function called abstract_ai_gui(). This function is responsible for maintaining the Graphical User Interface (GUI) of the module, serving as a bridge between the user interface and the GPT-3 API. It achieves this by importing and initializing the GptManager class from the gpt_classes.gpt_manager submodule. The GptManager class likely provides necessary methods and attributes for managing OpenAI GPT-3 API calls, analyzing responses, and controlling the behaviour of the API interaction.
+
+/n/n in the script: src/abstract_ai/documentation/abstract_example.py
+ dubbed with the title: abstract_ai_Abstracted_Script_Setup_and_Control
+ was described as: The provided script appears to be split into four distinct segments which build upon each other to create a foundational structure for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module.\n\nIn the first segment (ModelBuilder), a model manager object is created which sets up the selected model parameters, including the selection of the GPT-4 model and its corresponding endpoint and maximum token limit.\n\nThe second segment (ApiBuilder) sets up the API manager with either environment variables or direct API keys, establishing communication links with the OpenAI API.\n\nThe third segment (InstructionBuilder) establishes a series of instructions that control how the system interacts with queries, including the ability to control features like suggestions, prompt continuation, aborting, title generation, and handling of additional responses.\n\nThe last segment (PromptBuilder) sets up the prompt manager, taking in all the prior configurations together with the user's request and any related data, and computing the distribution of tokens between prompts, completions, and chunks. It also demonstrates handling of completion percentages, allowing the user to adjust this parameter to control how chunking is conducted.\n\nIn summary, the script showcases the interconnected working of class objects in the 'abstract_ai' Python module to send queries to the OpenAI GPT-3 API, manage responses, and control the behavior of the API call while optimizing token utilization.
+
+/n/n in the script: src/abstract_ai/for_react.py
+ dubbed with the title: Analysis_of_for_react_script_in_abstract_ai_module
+ was described as: The provided script is responsible for parsing and analyzing JavaScript/TypeScript (including JSX/TSX) files, mainly related to React components. It uses the '@babel/parser' and '@babel/traverse' packages to traverse and parse the Abstract Syntax Tree (AST) of the file. It extracts important entities including import declarations, React functional components, and React class components as well as their dependencies. There are multiple functions to extract specific parts of the code, like import lines or code blocks for specific components.
+
+A 'ReactAnalyser' class is defined to manage this process, with methods to retrieve components, imports, and dependencies. On the GUI part of the code, a 'React Component Browser' is created where users can select a file and load components. Users can view dependencies of selected components, save components to a certain location, and manage files in this browser.
+
+The script is one part of the abstract_ai module suite, which is aimed at providing interfaces and tools to work with AI and ML functionalities. From the perspective of the whole module, this script contributes to handling and analyzing React files, which could be part of the data input, preprocessing, or AI model generation / training stages.
+
+/n/n in the script: src/abstract_ai/gpt_classes/__init__.py
+ dubbed with the title: abstract_ai_module_gpt_classes_initializer
+ was described as: The script provided serves as the initializer for the 'gpt_classes' submodule within the 'abstract_ai' module. It is responsible for setting up the different classes that interact with and control the behavior of the OpenAI GPT-3 API. Each imported file corresponds to a specific class.
+
+The 'response_selection' manages the response handling logic, while 'prompt_selection' is responsible for establishing prompts. The 'model_selection' sets up the models to be used, and 'instruction_selection' sets up the instructions to control queries. The 'api_selection' file sets up the API manager, while 'nogui_selection' provides functionalities for setup and querying without a GUI.
+
+In summary, this script serves to unify the different components for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module, streamlining the process of sending requests, managing responses, and controlling the behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/ApiBuilder.py
+ dubbed with the title: abstract_ai_module_ApiBuilder_Description
+ was described as: The provided Python script 'ApiBuilder.py' in the 'abstract_ai' module defines a class called 'ApiManager'. This class is responsible for managing the OpenAI API keys and headers used for communicating with OpenAI's GPT-3 API. The key features of this class include retrieving the API key, possibly from environment variables, loading the key for subsequent use in API requests, and constructing authorization headers for the API calls. To allow flexibility, the 'ApiManager' allows for custom content_type, api_env (environment variable name for API key), headers, and environment path for API key. These can also be defaulted to 'application/json', 'OPENAI_API_KEY', a call to 'get_header' method, and none, respectively. The 'get_openai_key' method retrieves the API key, the 'load_openai_key' method stores the API key in the openai module for API calls, and 'get_header' method generates the required headers for the requests. Ultimately, the 'ApiManager' serves as a key part of the 'abstract_ai' module, streamlining the process of configuring and managing the essential parameters for successful communication with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/__init__.py
+ dubbed with the title: abstract_ai_api_selection_initializer_description
+ was described as: The provided script is the __init__.py file located in the api_selection directory of the gpt_classes submodule from the abstract_ai Python module. This script is responsible for importing all the classes and functions defined in the ApiBuilder.py file. The ApiBuilder class enables management of API keys and headers necessary for communication with the OpenAI GPT-3 API, offering functionalities such as retrieving the API key from environment variables, loading it for API requests, and constructing authorization headers. In essence, this __init__.py script ensures that the classes and functions necessary for managing the GPT-3 API communication setup are readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/classes.py
+ dubbed with the title: abstract_ai_module_response_management_tests
+ was described as: The provided script appears to part of a test suite for the abstract_ai Python module, specifically focusing on response management. This involves a variety of classes and methods that work together to handle and manage API call responses from the GPT-3 AI. Chief among these is the ResponseManager class which appears to deal with generating and managing API call responses. 
+
+There are methods for generating new API call names, managing an asynchronous event loop for queries, handling future results from API calls, submitting events and queries, updating progress visuals in the UI, checking if the Response Manager has completed the query process, and one for managing the process of submitting queries to the GPT AI. Event and query handlers also play a pivotal role in managing and controlling the flow of requests and responses. 
+
+In summary, this chunk of the script ensures the response results from the GPT-3 AI are correctly processed, handled, and presented. It also handles exception handling, logging, and status updates for the response management process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/test_function.py
+ dubbed with the title: abstract_ai_Test_Function_Description
+ was described as: The script provided contains a single function named 'testFunc'. This method is a part of a class, as evidenced by the 'self' parameter. The purpose of this function is to print the message 'this test worked' to the console when called. This function likely serves as a test or placeholder within the 'abstract_ai' module, possibly used to confirm successful implementation or connectivity of a feature or service as a part of the module's testing process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/JsonHandler.py
+ dubbed with the title: JsonHandler_Functions_in_abstract_ai_Module
+ was described as: The provided script is named 'JsonHandler.py', found within the file_section of the gpt_classes directory in the abstract_ai Python module. It is comprised of several functions for managing JSON files and strings. Key features of this script include reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings. Here is a brief overview of the functions:
+
+1) 'read_saved_json(file_path)' opens, reads, and loads a JSON file at the given file path, returning the JSON data.
+
+2) 'read_docx(file_path)' reads and prints the text of each paragraph in a Microsoft Word document (.docx file) at the specified path, excluding newline characters, tabs, and spaces.
+
+3) 'replace_place_holder_ends(string,placeholder)' replaces parts of a string, from the position of a specified placeholder to the end of the string.
+
+4) 'process_all_strins(all_temp_string,strings,all_js)' processes temporary strings, replacing placeholders.
+
+5) 'fix_malformed_json(malformed_json_string)' processes a malformed JSON string and fixes it, returning a correctly formatted JSON object.
+
+6) 'preprocess_string(s)' replaces certain characters in a string with placeholders to prevent them from interfering with JSON processing.
+
+7) 'postprocess_string(s)' reverses the replacements made by 'preprocess_string(s)'.
+
+8) 'replace(data)' uses a regular expression (regex) to globally substitute certain character sequences in a string, with specific emphasis on sequences involving single quotation marks.
+
+In essence, 'JsonHandler.py' is a utility script in the 'abstract_ai' module that aids with processing, managing, and handling exceptions related to working with JSON data.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/__init__.py
+ dubbed with the title: abstract_ai_file_section_initializer
+ was described as: The provided script serves as part of the '__init__.py' file for the 'file_section' directory within the 'gpt_classes' submodule of the 'abstract_ai' module. This script is responsible for importing all the classes and functions defined in 'JsonHandler.py' and 'responseContentParser.py'. These imported scripts are crucial to the functionality of the 'abstract_ai' module.
+
+The 'JsonHandler.py' script contains several functions for managing JSON files and strings. This includes reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings.
+
+The 'responseContentParser.py' script is likely to contain functionalities related to parsing the content of responses from the OpenAI GPT-3 API. These may include extracting specific information, handling different response formats, and processing the API's output for use within the rest of the module.
+
+Overall, this part of the '__init__.py' file is fundamental for importing necessary functionalities related to JSON handling and response content parsing within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/responseContentParser.py
+ dubbed with the title: responseContentParser_chunk1_prompt_content_extraction
+ was described as: The provided script is a part from 'responseContentParser.py' in the 'file_section' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This script defines a function called 'get_prompt_content(data)'. This function is designed to extract the content of the prompt from the response of the OpenAI GPT-3 API.\n\nThe function accepts a 'data' argument, which is likely the response data from the GPT-3 API. It uses the 'get_any_value' utility method from the 'abstract_utilities' module to access nested keys within the response data. First, it retrieves the 'prompt' key's value from the response data and assigns it to 'prompt_data'. Next, it obtains the 'messages' from 'prompt_data', which is assigned to 'message_data'.\n\nIf 'message_data' is a list and is not empty, the function attempts to safely load the first element of 'message_data' as a JSON string using 'safe_json_loads()'. This is done to handle cases where the 'message' of the response is formatted as a JSON string. Finally, it retrieves the 'content' key from 'message_data', which is the actual content of the prompt.\n\nIn summary, 'get_prompt_content(data)' function is responsible for extracting the content of the prompt from the GPT-3 API response within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/GptManager.py
+ dubbed with the title: GptManager_Class_In_Abstract_AI_Module
+ was described as: The GptManager.py script in the provided module, "abstract_ai", defines the complex GptManager class which manages the various aspects of AI interactions. The GptManager class controls features like window management, browser management, next read management, threading, history management, model management, and instruction management. The class has multiple methods for updating and managing values for the model, API, and instructions. It also handles events related to model and instructions, as well as the submission of queries. This class is critical to the functionality and operability of the module as it not only ensures efficient querying and communication with the OpenAI GPT-3 API but also maintains and updates the parameters of the API. The class also has safety measures to handle exceptions and errors in the communication process, thus ensuring reliability and smooth operation.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/__init__.py
+ dubbed with the title: GptManager_Class_Import_in_gpt_manager_Module
+ was described as: The provided script is the __init__.py file located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. The script is responsible for importing the GptManager class from the GptManager.py file located in the same directory. The GptManager class plays a pivotal role in interacting with and controlling various aspects of the OpenAI GPT-3 API. Accordingly, this __init__.py file ensures that the GptManager class is readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/dependencies.py
+ dubbed with the title: gpt_manager_dependencies_chunk1
+ was described as: The provided data in this chunk is the first part of the script titled 'dependencies.py', located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. However, the chunk does not offer any concrete scripts and merely contains a section comment indicating '# DEPENDENCIES #'. Without more information related to actual dependencies being imported or utilised in the file, it's not feasible to derive a definitive understanding or description of this script in the context of the abstract_ai module. The completion of this script would ideally provide details on specific Python packages or modules being imported, which are crucial for the functionality of the rest of the scripts in the module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/__init__.py
+ dubbed with the title: abstract_ai_instruction_section_initializer
+ was described as: The provided chunk is the "__init__.py" file located in the "instruction_section" directory of the "gpt_manager" subdirectory, within the "gpt_classes" submodule of the "abstract_ai" Python module. From the line of code in this chunk, it can be inferred that the "__init__.py" file in "instruction_section" is responsible for importing everything (indicated by the asterisk) from the "instruction_management" module. This would likely include classes, functions, and variables defined in the "instruction_management" module that are instrumental for managing and controlling the behavior of the OpenAI GPT-3 API. Instructions in this context likely refer to the necessary parameters and configurations used to influence how the system interacts with its queries, enabling the user to control various features like suggestions, prompt continuation, aborting, and title generation. Overall, this script ensures that the instructions related functionalities are readily accessible within the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/instruction_management.py
+ dubbed with the title: abstract_ai_instruction_management
+ was described as: The provided script, a part of the 'instruction_management.py' located in the 'instruction_section' directory of the 'gpt_classes/gpt_manager' submodule in the 'abstract_ai' Python module, contains parts of the code for managing and updating instructions in the abstract_ai module's Graphical User Interface (GUI).\n\nThree functions are defined: 'update_instruction_mgr', 'update_bool_instructions', and 'restore_instruction_defaults'.\n\nThe 'update_instruction_mgr' function updates the Instruction Manager with environment values from the GUI, handling specific user adjustments for instructions and reflecting them on the Instruction Manager's attributes. If the '-instructions-' key in the GUI is set, it updates each instruction key accordingly.\n\nThe 'update_bool_instructions' function sets the 'api_response' key as true and updates user adjustments on boolean instruction values in the GUI, ensuring the Instruction Manager reflects the current state of boolean instructions set by the user.\n\nLastly, the 'restore_instruction_defaults' function restores the instructions to their default state as defined in the Instruction Manager. It does this by updating each command key in the GUI with its corresponding default value captured from the Instruction Manager. Overall, this script is essential for the flexible handling and adjustment of instructions during the usage of the abstract_ai module, ensuring a dynamic interaction between the user and the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/__init__.py
+ dubbed with the title: abstract_ai_prompt_section_initializer
+ was described as: The provided script is an __init__.py file located in the 'prompt_section' directory of the 'gpt_manager' of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This file is responsible for importing all classes, functions, and variables from the 'prompt_management' module. This implies that the 'prompt_management' module likely contains definitions and functionalities necessary for managing prompts when interacting with the OpenAI GPT-3 API. This functionality includes defining and modifying prompts, setting rules for prompts, and other related tasks. In conclusion, the __init__.py file in the 'prompt_section' streamlines the import of critical prompt management functionalities to the 'abstract_ai' module, enhancing its efficiency and ease in handling prompts while interacting with the OpenAI API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/prompt_management.py
+ dubbed with the title: abstract_ai_module_prompt_management_overview
+ was described as: The script 'prompt_management.py' exists within the module 'abstract_ai', primarily serving functions related to the interaction with the OpenAI GPT-3 API. Initiating with dependency imports, the script continues to initialize the prompt manager and prepare it for GPT-3 querying. The script provides a variety of functions that work in conjunction with user interface such as updating request and prompt data lists, checking if events related to prompting or requesting data occurred, managing history events, updating the query display and handling navigation events. Furthermore, the script also facilitates actions like adding user’s request to request chunk, updating chunk data and performing some actions based on specific events in the user interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/__init__.py
+ dubbed with the title: abstract_ai_response_section_initializer
+ was described as: The provided script is the __init__.py file located in the 'response_section' directory within the 'gpt_manager' submodule of the 'gpt_classes' within the 'abstract_ai' Python module. This file suggests that the 'response_section' directory consists of several Python files including 'output_display.py', 'output_file_utils.py', 'output_response.py', 'progress_display.py', 'query_events.py', and 'response_section.py'.
+
+Each of these files presumably contains different aspects of handling the response received from the OpenAI GPT-3 API and displaying or processing it accordingly. For instance, 'output_display.py' and 'output_response.py' might handle the displaying of the generated result. 'progress_display.py' might track the execution of the OpenAI API call, and 'query_events.py' could handle the events occurring in filing the API queries. 'output_file_utils.py' might include utilities for handling response output for static files.
+
+In summary, this initializer script plays a crucial role in consolidating all the response handling functionalities of the 'abstract_ai' module, which make it easier to interact with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_display.py
+ dubbed with the title: Output_Display_Portion_in_abstract_ai_Response_Section
+ was described as: The provided script is chunk 1 of 3 from 'output_display.py' located in 'response_section' directory within the 'gpt_manager' submodule of 'abstract_ai' Python module. The given functions in this script file are responsible for the management and display of the latest output from the OpenAI GPT-3 API in the Graphical User Interface (GUI). There are three functions in this chunk: 'initialize_output_display', 'get_output_display_numbers', and 'determine_output_display'. The 'initialize_output_display' function sets up the GUI for displaying the latest output. If any latest output exists, it saves it into 'current_output'. The 'get_output_display_numbers' function retrieves the actual and display numbers for managing output navigation.5 Finally, 'determine_output_display', which likely takes a navigation event as an argument, will decide which output to display based on this event.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_file_utils.py
+ dubbed with the title: abstract_ai_Listbox_Event_Check_Function
+ was described as: The provided script is chunk 1 of 9 from an unidentified file in the Python 'abstract_ai' module. The script defines a single function 'listbox_event_check'. The function is an instance method taking the 'self' parameter, indicating that it is part of a class. The function checks if an event is triggered in a listbox - a graphical user interface element that displays a list of options to the user. If such an event is triggered, this function updates the GUI accordingly. Given the function's purpose, it is likely part of a GUI management class within the 'abstract_ai' module, responsible for handling user interactions and updating the interface in response to these interactions.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_response.py
+ dubbed with the title: abstract_ai_get_output_response_function
+ was described as: The provided script, denoting chunk 1 of 2 from an unidentified file in the 'abstract_ai' Python module, defines the 'get_output_response' method. This method is devised to format the output string of a response in a clear, readable manner. It includes integral information about the model, title, user's request, and the AI's response. The function accepts parameters for 'model', 'title', 'request', 'response', and 'output_files', and formats it in a certain order with appropriate new lines for readability. Once formatted, the output string is returned. This function is likely part of a larger class or module responsible for managing and formatting responses from the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/progress_display.py
+ dubbed with the title: abstract_ai_Progress_Display_Methods
+ was described as: The provided script defines two methods within an unidentified Python class, likely part of the 'abstract_ai' module. These methods, 'get_dots' and 'update_progress_chunks', are intended to update the progress bar and status in the Graphical User Interface (GUI) as the module processes chunks of data in its interaction with the GPT-3 API.
+
+The 'get_dots' method manages a dynamic visual display of progress, while 'update_progress_chunks' manages the progress bar and text status in the UI depending on the number of chunks processed. If the process is completed, it updates the UI with a sent status and re-enables the 'SUBMIT_QUERY' button. This script contributes significantly towards enabling the user to track and understand the status of their queries with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/query_events.py
+ dubbed with the title: abstract_ai_module_query_event_check_function
+ was described as: The provided script is a part of an unknown python file within the abstract_ai Python module. The file contains a definition for the function \'query_event_check\'. This function checks if a query event has been triggered; if so, and no submission is currently in progress, it initiates a new API query. This is accomplished by creating a new API call name, and submitting the coroutine to the event loop. The function then attaches a callback function to handle the future result of the coroutine. If a submission is already in progress, it logs an information message stating "Submission already in progress." If another event type is detected, it simply returns false. This function is presumably part of a class handling the communication and management of API queries to the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/response_section.py
+ dubbed with the title: gpt_classes_gpt_manager_response_section_part1
+ was described as: This script, 'response_section.py' (chunk 1 of 6), is part of the response section within the gpt_manager of the gpt_classes submodule in the abstract_ai Python module. It includes an import statement for dependencies, which appears to include utility functions or classes necessary for handling responses from the GPT-3 API. The script defines several functions for managing responses from the OpenAI GPT-3 API.\n\nThe 'update_response_mgr' method updates the ResponseManager with prompt and API managers, presumably refreshing its state or providing it with up-to-date data.\n\nThe 'get_new_api_call_name' method generates a new unique API call name and adds it to a list of API call names. This function is used to identify and manage individual API calls uniquely.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/__init__.py
+ dubbed with the title: Init_Script_Description_of_Abstract_Ai_GPT_Manager_Test_Section
+ was described as: The __init__.py file located in the test_section of abstract_ai GPT manager appears to import everything from the module "test_management". This suggests that "test_management" likely contains various classes, methods, or variables that are used for testing different aspects or functionalities within the abstract_ai module. The fact that these are being imported in the __init__.py file means they are made readily accessible for other scripts that may import the test_section.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/test_management.py
+ dubbed with the title: abstract_ai_check_test_bool_function
+ was described as: The provided script is the first of four chunks from an undisclosed python file within the abstract_ai Python module. In this script, a function named 'check_test_bool' is defined. This function checks the status of the 'self.test_bool' attribute, likely within the scope of a specific class, which remains unidentified in this context. The function does not appear to take in any arguments besides 'self', implying it operates on the instance attributes of the class to which it belongs. The function performs no explicit operations and its intended effect or use is unclear without additional context. It's accompanied by a docstring, providing a brief explanation of the function's purpose, though this particular docstring does not offer any substantial information about the function itself.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/__init__.py
+ dubbed with the title: abstract_ai_url_section_initializer
+ was described as: The provided script is the '__init__.py' file in the 'url_section' of the 'gpt_manager' directory, within the 'gpt_classes' submodule of the 'abstract_ai' Python module. This '__init__.py' file is responsible for importing all classes, functions, and variables from the 'url_management' module. The 'url_management' module likely contains functionalities related to management and processing of URLs in interacting with and controlling the OpenAI GPT-3 API calls. The '__init__.py' script ensures that these URL handling functionalities are readily accessible within the 'abstract_ai' module, contributing to the module's streamlined process of managing requests, responses, and behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/url_management.py
+ dubbed with the title: abstract_ai_Append_Output_and_Get_URL_Functions
+ was described as: The provided script chunk is part of an undisclosed python file within the 'abstract_ai' Python module. It defines two methods: 'append_output' and 'get_url'. 'append_output' appends a line of text to the 'other' section of feedback on the Graphical User Interface (GUI). It takes 'self' and two arguments, 'key' and 'new_content', the latter of which is the line of text to be added. The 'get_url' method retrieves the URL entered by the user in the corresponding input field of the GUI. It contains conditions to handle the possibility of the URL being 'None', checking the 'URL_LIST' for a potential URL. The methods are likely part of a class that handles user interactions with the GUI, particularly in retrieving URL data input, and updating the feedback on the interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/__init__.py
+ dubbed with the title: abstract_ai_window_section_initializer
+ was described as: The script provided represents the '__init__.py' file in the 'window_section' of the 'gpt_manager' subfolder located in the 'gpt_classes' subfolder of the 'abstract_ai' Python module. Its function is to enable the importation of all functionalities from the 'window_management' module. The 'window_management' module is likely to include classes, functions, and variables that facilitate user interaction with the OpenAI GPT-3 API through various windows in a graphical user interface (GUI). This '__init__.py' file ensures these functionalities are made accessible throughout the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/window_management.py
+ dubbed with the title: Abstract_AI_Window_Management_Readme_Event_Function
+ was described as: The provided chunk is part 1 of 11 from 'window_management.py', which is located in the 'window_section' directory under the 'gpt_manager' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This chunk of the script introduces imports from dependencies and defines a function named 'readme_event_check'. This function, which is an instance method within a class, checks whether the 'Generate README' event has been triggered. Judging by the method's title and documentation, it likely plays a crucial role in generating a comprehensive README for the AI model, possibly summarizing its behavior, functionalities, or outcomes. As such, this script appears to be responsible for managing critical components of the abstract_ai Python module's graphic user interface, specifically focusing on events related to generating README files.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder.py
+ dubbed with the title: Abstract_AI_InstructionBuilder_Module_Description
+ was described as: The script "InstructionBuilder.py" in Abstract_AI Python module contains a class "InstructionManager" which is used for managing user's instructions. This includes a set of default instructions and methods for handling and utilizing these instructions such as creating new instructions, updating existing ones, getting the current instructions and adding new ones. The instructions consist of instructions text, example values, and a default state of execution. This utility seems to be the core part of structuring user’s responses in a specified format and controlling the API call behavior.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder_nogui.py
+ dubbed with the title: abstract_ai_instructionBuilder_py_module_chunk1
+ was described as: The provided script is a small chunk of the "InstructionBuilder.py" file found in the "instruction_selection" folder from the "gpt_classes" subdirectory within the "abstract_ai" Python module. It includes a function named "text_to_key", which accepts two parameters: text and section.\n\nThis function appears to transform a text description into a GUI key, primarily based on the section input parameter. The function removes the spaces from the text description and replaces them with underscores, converts the resultant string to uppercase, and then concatenates it with the section name (delimited by an underscore), thereby forming a key string.The produced key string can be used as an identifying key for user interface elements in the graphical user interface (GUI) of the module, ensuring each component is uniquely identifiable for user interaction, state updates, or referencing. This function might be critical in setting up the GUI for the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionManager_nogui.py
+ dubbed with the title: Import_of_Data_Processing_Functions_in_Abstract_AI_Module
+ was described as: The provided script chunk is part 1 of 17 from an unspecified file within the abstract_ai Python module. It imports 'get_actual_number' and 'eatAll' functions from abstract_utilities. Additionally, it imports 'is_bool' function from the type_utils module, present within abstract_utilities. These imported functions suggest the script deals with processing and type checking of input data. 'get_actual_number' likely assists in processing numerical data, 'eatAll' might help in data consumption or parsing, while 'is_bool' is useful in checking boolean data types. While we lack the full context to assess the script's entire functionality, from this isolated chunk, we can infer that it is designed to handle and process various types of data, possibly in preparation for interactions with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/__init__.py
+ dubbed with the title: Short_Title_for_Query'}
+-----------------------------------------------------------------------------
+#prompt#
+
+the data provided is __init__.py from partial path src/abstract_ai/gpt_classes/instruction_selection/__init__.py in 📦 **abstract_ai** v0.2.1.102
+> abstract_ai is a Python module that serves as a bridge between your application and the OpenAI GPT-3 API. It provides a convenient interface for sending requests, managing responses, and controlling the behavior of the API calls. This module is highly customizable, allowing you to establish prompts, instructions, and response handling logic.
+
+👤 Author: putkoff (partners@abstractendeavors.com)
+🪪 License: Unknown License
+
+🏷️ Classifiers:
+  - Development Status :: 3 - Alpha
+  - Intended Audience :: Developers
+  - License :: OSI Approved :: MIT License
+  - Programming Language :: Python :: 3
+  - Programming Language :: Python :: 3.11
+
+📦 Dependencies:
+  - abstract_database
+  - abstract_security>=0.0.1
+  - abstract_webtools>=0.1.4.90
+  - tiktoken>=0.5.1
+  - abstract_utilities>=0.2.2.1
+  - abstract_gui>=0.0.60.0
+  - pyperclip>=1.8.2
+  - openai>=0.28.1
+  - requests>=2.31.0
+  - nltk>=3.8.1
+  - python-docx
+
+ here is a synopsis of the previous scripts:  in the script: src/abstract_ai/__init__.py
+ dubbed with the title: abstract_ai_module_initializer
+ was described as: The provided script serves as an initializer for the 'abstract_ai' module, importing necessary classes and functions to enable the functionalities of the module. Key components imported include 'ApiManager', 'ModelManager', 'PromptManager', 'ResponseManager', and 'InstructionManager' which are responsible for controlling different aspects of interacting with the OpenAI GPT-3 API. Additionally, the module includes functionalities for setup and querying without a GUI, as well as for interaction with a database and an abstract AI GUI.
+
+/n/n in the script: src/abstract_ai/abstract_ai_gui.py
+ dubbed with the title: abstract_ai_gui_Function_Description
+ was described as: The abstract_ai_gui.py script in the abstract_ai v0.2.1.102 Python module contains a single function called abstract_ai_gui(). This function is responsible for maintaining the Graphical User Interface (GUI) of the module, serving as a bridge between the user interface and the GPT-3 API. It achieves this by importing and initializing the GptManager class from the gpt_classes.gpt_manager submodule. The GptManager class likely provides necessary methods and attributes for managing OpenAI GPT-3 API calls, analyzing responses, and controlling the behaviour of the API interaction.
+
+/n/n in the script: src/abstract_ai/documentation/abstract_example.py
+ dubbed with the title: abstract_ai_Abstracted_Script_Setup_and_Control
+ was described as: The provided script appears to be split into four distinct segments which build upon each other to create a foundational structure for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module.\n\nIn the first segment (ModelBuilder), a model manager object is created which sets up the selected model parameters, including the selection of the GPT-4 model and its corresponding endpoint and maximum token limit.\n\nThe second segment (ApiBuilder) sets up the API manager with either environment variables or direct API keys, establishing communication links with the OpenAI API.\n\nThe third segment (InstructionBuilder) establishes a series of instructions that control how the system interacts with queries, including the ability to control features like suggestions, prompt continuation, aborting, title generation, and handling of additional responses.\n\nThe last segment (PromptBuilder) sets up the prompt manager, taking in all the prior configurations together with the user's request and any related data, and computing the distribution of tokens between prompts, completions, and chunks. It also demonstrates handling of completion percentages, allowing the user to adjust this parameter to control how chunking is conducted.\n\nIn summary, the script showcases the interconnected working of class objects in the 'abstract_ai' Python module to send queries to the OpenAI GPT-3 API, manage responses, and control the behavior of the API call while optimizing token utilization.
+
+/n/n in the script: src/abstract_ai/for_react.py
+ dubbed with the title: Analysis_of_for_react_script_in_abstract_ai_module
+ was described as: The provided script is responsible for parsing and analyzing JavaScript/TypeScript (including JSX/TSX) files, mainly related to React components. It uses the '@babel/parser' and '@babel/traverse' packages to traverse and parse the Abstract Syntax Tree (AST) of the file. It extracts important entities including import declarations, React functional components, and React class components as well as their dependencies. There are multiple functions to extract specific parts of the code, like import lines or code blocks for specific components.
+
+A 'ReactAnalyser' class is defined to manage this process, with methods to retrieve components, imports, and dependencies. On the GUI part of the code, a 'React Component Browser' is created where users can select a file and load components. Users can view dependencies of selected components, save components to a certain location, and manage files in this browser.
+
+The script is one part of the abstract_ai module suite, which is aimed at providing interfaces and tools to work with AI and ML functionalities. From the perspective of the whole module, this script contributes to handling and analyzing React files, which could be part of the data input, preprocessing, or AI model generation / training stages.
+
+/n/n in the script: src/abstract_ai/gpt_classes/__init__.py
+ dubbed with the title: abstract_ai_module_gpt_classes_initializer
+ was described as: The script provided serves as the initializer for the 'gpt_classes' submodule within the 'abstract_ai' module. It is responsible for setting up the different classes that interact with and control the behavior of the OpenAI GPT-3 API. Each imported file corresponds to a specific class.
+
+The 'response_selection' manages the response handling logic, while 'prompt_selection' is responsible for establishing prompts. The 'model_selection' sets up the models to be used, and 'instruction_selection' sets up the instructions to control queries. The 'api_selection' file sets up the API manager, while 'nogui_selection' provides functionalities for setup and querying without a GUI.
+
+In summary, this script serves to unify the different components for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module, streamlining the process of sending requests, managing responses, and controlling the behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/ApiBuilder.py
+ dubbed with the title: abstract_ai_module_ApiBuilder_Description
+ was described as: The provided Python script 'ApiBuilder.py' in the 'abstract_ai' module defines a class called 'ApiManager'. This class is responsible for managing the OpenAI API keys and headers used for communicating with OpenAI's GPT-3 API. The key features of this class include retrieving the API key, possibly from environment variables, loading the key for subsequent use in API requests, and constructing authorization headers for the API calls. To allow flexibility, the 'ApiManager' allows for custom content_type, api_env (environment variable name for API key), headers, and environment path for API key. These can also be defaulted to 'application/json', 'OPENAI_API_KEY', a call to 'get_header' method, and none, respectively. The 'get_openai_key' method retrieves the API key, the 'load_openai_key' method stores the API key in the openai module for API calls, and 'get_header' method generates the required headers for the requests. Ultimately, the 'ApiManager' serves as a key part of the 'abstract_ai' module, streamlining the process of configuring and managing the essential parameters for successful communication with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/__init__.py
+ dubbed with the title: abstract_ai_api_selection_initializer_description
+ was described as: The provided script is the __init__.py file located in the api_selection directory of the gpt_classes submodule from the abstract_ai Python module. This script is responsible for importing all the classes and functions defined in the ApiBuilder.py file. The ApiBuilder class enables management of API keys and headers necessary for communication with the OpenAI GPT-3 API, offering functionalities such as retrieving the API key from environment variables, loading it for API requests, and constructing authorization headers. In essence, this __init__.py script ensures that the classes and functions necessary for managing the GPT-3 API communication setup are readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/classes.py
+ dubbed with the title: abstract_ai_module_response_management_tests
+ was described as: The provided script appears to part of a test suite for the abstract_ai Python module, specifically focusing on response management. This involves a variety of classes and methods that work together to handle and manage API call responses from the GPT-3 AI. Chief among these is the ResponseManager class which appears to deal with generating and managing API call responses. 
+
+There are methods for generating new API call names, managing an asynchronous event loop for queries, handling future results from API calls, submitting events and queries, updating progress visuals in the UI, checking if the Response Manager has completed the query process, and one for managing the process of submitting queries to the GPT AI. Event and query handlers also play a pivotal role in managing and controlling the flow of requests and responses. 
+
+In summary, this chunk of the script ensures the response results from the GPT-3 AI are correctly processed, handled, and presented. It also handles exception handling, logging, and status updates for the response management process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/test_function.py
+ dubbed with the title: abstract_ai_Test_Function_Description
+ was described as: The script provided contains a single function named 'testFunc'. This method is a part of a class, as evidenced by the 'self' parameter. The purpose of this function is to print the message 'this test worked' to the console when called. This function likely serves as a test or placeholder within the 'abstract_ai' module, possibly used to confirm successful implementation or connectivity of a feature or service as a part of the module's testing process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/JsonHandler.py
+ dubbed with the title: JsonHandler_Functions_in_abstract_ai_Module
+ was described as: The provided script is named 'JsonHandler.py', found within the file_section of the gpt_classes directory in the abstract_ai Python module. It is comprised of several functions for managing JSON files and strings. Key features of this script include reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings. Here is a brief overview of the functions:
+
+1) 'read_saved_json(file_path)' opens, reads, and loads a JSON file at the given file path, returning the JSON data.
+
+2) 'read_docx(file_path)' reads and prints the text of each paragraph in a Microsoft Word document (.docx file) at the specified path, excluding newline characters, tabs, and spaces.
+
+3) 'replace_place_holder_ends(string,placeholder)' replaces parts of a string, from the position of a specified placeholder to the end of the string.
+
+4) 'process_all_strins(all_temp_string,strings,all_js)' processes temporary strings, replacing placeholders.
+
+5) 'fix_malformed_json(malformed_json_string)' processes a malformed JSON string and fixes it, returning a correctly formatted JSON object.
+
+6) 'preprocess_string(s)' replaces certain characters in a string with placeholders to prevent them from interfering with JSON processing.
+
+7) 'postprocess_string(s)' reverses the replacements made by 'preprocess_string(s)'.
+
+8) 'replace(data)' uses a regular expression (regex) to globally substitute certain character sequences in a string, with specific emphasis on sequences involving single quotation marks.
+
+In essence, 'JsonHandler.py' is a utility script in the 'abstract_ai' module that aids with processing, managing, and handling exceptions related to working with JSON data.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/__init__.py
+ dubbed with the title: abstract_ai_file_section_initializer
+ was described as: The provided script serves as part of the '__init__.py' file for the 'file_section' directory within the 'gpt_classes' submodule of the 'abstract_ai' module. This script is responsible for importing all the classes and functions defined in 'JsonHandler.py' and 'responseContentParser.py'. These imported scripts are crucial to the functionality of the 'abstract_ai' module.
+
+The 'JsonHandler.py' script contains several functions for managing JSON files and strings. This includes reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings.
+
+The 'responseContentParser.py' script is likely to contain functionalities related to parsing the content of responses from the OpenAI GPT-3 API. These may include extracting specific information, handling different response formats, and processing the API's output for use within the rest of the module.
+
+Overall, this part of the '__init__.py' file is fundamental for importing necessary functionalities related to JSON handling and response content parsing within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/responseContentParser.py
+ dubbed with the title: responseContentParser_chunk1_prompt_content_extraction
+ was described as: The provided script is a part from 'responseContentParser.py' in the 'file_section' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This script defines a function called 'get_prompt_content(data)'. This function is designed to extract the content of the prompt from the response of the OpenAI GPT-3 API.\n\nThe function accepts a 'data' argument, which is likely the response data from the GPT-3 API. It uses the 'get_any_value' utility method from the 'abstract_utilities' module to access nested keys within the response data. First, it retrieves the 'prompt' key's value from the response data and assigns it to 'prompt_data'. Next, it obtains the 'messages' from 'prompt_data', which is assigned to 'message_data'.\n\nIf 'message_data' is a list and is not empty, the function attempts to safely load the first element of 'message_data' as a JSON string using 'safe_json_loads()'. This is done to handle cases where the 'message' of the response is formatted as a JSON string. Finally, it retrieves the 'content' key from 'message_data', which is the actual content of the prompt.\n\nIn summary, 'get_prompt_content(data)' function is responsible for extracting the content of the prompt from the GPT-3 API response within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/GptManager.py
+ dubbed with the title: GptManager_Class_In_Abstract_AI_Module
+ was described as: The GptManager.py script in the provided module, "abstract_ai", defines the complex GptManager class which manages the various aspects of AI interactions. The GptManager class controls features like window management, browser management, next read management, threading, history management, model management, and instruction management. The class has multiple methods for updating and managing values for the model, API, and instructions. It also handles events related to model and instructions, as well as the submission of queries. This class is critical to the functionality and operability of the module as it not only ensures efficient querying and communication with the OpenAI GPT-3 API but also maintains and updates the parameters of the API. The class also has safety measures to handle exceptions and errors in the communication process, thus ensuring reliability and smooth operation.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/__init__.py
+ dubbed with the title: GptManager_Class_Import_in_gpt_manager_Module
+ was described as: The provided script is the __init__.py file located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. The script is responsible for importing the GptManager class from the GptManager.py file located in the same directory. The GptManager class plays a pivotal role in interacting with and controlling various aspects of the OpenAI GPT-3 API. Accordingly, this __init__.py file ensures that the GptManager class is readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/dependencies.py
+ dubbed with the title: gpt_manager_dependencies_chunk1
+ was described as: The provided data in this chunk is the first part of the script titled 'dependencies.py', located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. However, the chunk does not offer any concrete scripts and merely contains a section comment indicating '# DEPENDENCIES #'. Without more information related to actual dependencies being imported or utilised in the file, it's not feasible to derive a definitive understanding or description of this script in the context of the abstract_ai module. The completion of this script would ideally provide details on specific Python packages or modules being imported, which are crucial for the functionality of the rest of the scripts in the module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/__init__.py
+ dubbed with the title: abstract_ai_instruction_section_initializer
+ was described as: The provided chunk is the "__init__.py" file located in the "instruction_section" directory of the "gpt_manager" subdirectory, within the "gpt_classes" submodule of the "abstract_ai" Python module. From the line of code in this chunk, it can be inferred that the "__init__.py" file in "instruction_section" is responsible for importing everything (indicated by the asterisk) from the "instruction_management" module. This would likely include classes, functions, and variables defined in the "instruction_management" module that are instrumental for managing and controlling the behavior of the OpenAI GPT-3 API. Instructions in this context likely refer to the necessary parameters and configurations used to influence how the system interacts with its queries, enabling the user to control various features like suggestions, prompt continuation, aborting, and title generation. Overall, this script ensures that the instructions related functionalities are readily accessible within the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/instruction_management.py
+ dubbed with the title: abstract_ai_instruction_management
+ was described as: The provided script, a part of the 'instruction_management.py' located in the 'instruction_section' directory of the 'gpt_classes/gpt_manager' submodule in the 'abstract_ai' Python module, contains parts of the code for managing and updating instructions in the abstract_ai module's Graphical User Interface (GUI).\n\nThree functions are defined: 'update_instruction_mgr', 'update_bool_instructions', and 'restore_instruction_defaults'.\n\nThe 'update_instruction_mgr' function updates the Instruction Manager with environment values from the GUI, handling specific user adjustments for instructions and reflecting them on the Instruction Manager's attributes. If the '-instructions-' key in the GUI is set, it updates each instruction key accordingly.\n\nThe 'update_bool_instructions' function sets the 'api_response' key as true and updates user adjustments on boolean instruction values in the GUI, ensuring the Instruction Manager reflects the current state of boolean instructions set by the user.\n\nLastly, the 'restore_instruction_defaults' function restores the instructions to their default state as defined in the Instruction Manager. It does this by updating each command key in the GUI with its corresponding default value captured from the Instruction Manager. Overall, this script is essential for the flexible handling and adjustment of instructions during the usage of the abstract_ai module, ensuring a dynamic interaction between the user and the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/__init__.py
+ dubbed with the title: abstract_ai_prompt_section_initializer
+ was described as: The provided script is an __init__.py file located in the 'prompt_section' directory of the 'gpt_manager' of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This file is responsible for importing all classes, functions, and variables from the 'prompt_management' module. This implies that the 'prompt_management' module likely contains definitions and functionalities necessary for managing prompts when interacting with the OpenAI GPT-3 API. This functionality includes defining and modifying prompts, setting rules for prompts, and other related tasks. In conclusion, the __init__.py file in the 'prompt_section' streamlines the import of critical prompt management functionalities to the 'abstract_ai' module, enhancing its efficiency and ease in handling prompts while interacting with the OpenAI API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/prompt_management.py
+ dubbed with the title: abstract_ai_module_prompt_management_overview
+ was described as: The script 'prompt_management.py' exists within the module 'abstract_ai', primarily serving functions related to the interaction with the OpenAI GPT-3 API. Initiating with dependency imports, the script continues to initialize the prompt manager and prepare it for GPT-3 querying. The script provides a variety of functions that work in conjunction with user interface such as updating request and prompt data lists, checking if events related to prompting or requesting data occurred, managing history events, updating the query display and handling navigation events. Furthermore, the script also facilitates actions like adding user’s request to request chunk, updating chunk data and performing some actions based on specific events in the user interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/__init__.py
+ dubbed with the title: abstract_ai_response_section_initializer
+ was described as: The provided script is the __init__.py file located in the 'response_section' directory within the 'gpt_manager' submodule of the 'gpt_classes' within the 'abstract_ai' Python module. This file suggests that the 'response_section' directory consists of several Python files including 'output_display.py', 'output_file_utils.py', 'output_response.py', 'progress_display.py', 'query_events.py', and 'response_section.py'.
+
+Each of these files presumably contains different aspects of handling the response received from the OpenAI GPT-3 API and displaying or processing it accordingly. For instance, 'output_display.py' and 'output_response.py' might handle the displaying of the generated result. 'progress_display.py' might track the execution of the OpenAI API call, and 'query_events.py' could handle the events occurring in filing the API queries. 'output_file_utils.py' might include utilities for handling response output for static files.
+
+In summary, this initializer script plays a crucial role in consolidating all the response handling functionalities of the 'abstract_ai' module, which make it easier to interact with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_display.py
+ dubbed with the title: Output_Display_Portion_in_abstract_ai_Response_Section
+ was described as: The provided script is chunk 1 of 3 from 'output_display.py' located in 'response_section' directory within the 'gpt_manager' submodule of 'abstract_ai' Python module. The given functions in this script file are responsible for the management and display of the latest output from the OpenAI GPT-3 API in the Graphical User Interface (GUI). There are three functions in this chunk: 'initialize_output_display', 'get_output_display_numbers', and 'determine_output_display'. The 'initialize_output_display' function sets up the GUI for displaying the latest output. If any latest output exists, it saves it into 'current_output'. The 'get_output_display_numbers' function retrieves the actual and display numbers for managing output navigation.5 Finally, 'determine_output_display', which likely takes a navigation event as an argument, will decide which output to display based on this event.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_file_utils.py
+ dubbed with the title: abstract_ai_Listbox_Event_Check_Function
+ was described as: The provided script is chunk 1 of 9 from an unidentified file in the Python 'abstract_ai' module. The script defines a single function 'listbox_event_check'. The function is an instance method taking the 'self' parameter, indicating that it is part of a class. The function checks if an event is triggered in a listbox - a graphical user interface element that displays a list of options to the user. If such an event is triggered, this function updates the GUI accordingly. Given the function's purpose, it is likely part of a GUI management class within the 'abstract_ai' module, responsible for handling user interactions and updating the interface in response to these interactions.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_response.py
+ dubbed with the title: abstract_ai_get_output_response_function
+ was described as: The provided script, denoting chunk 1 of 2 from an unidentified file in the 'abstract_ai' Python module, defines the 'get_output_response' method. This method is devised to format the output string of a response in a clear, readable manner. It includes integral information about the model, title, user's request, and the AI's response. The function accepts parameters for 'model', 'title', 'request', 'response', and 'output_files', and formats it in a certain order with appropriate new lines for readability. Once formatted, the output string is returned. This function is likely part of a larger class or module responsible for managing and formatting responses from the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/progress_display.py
+ dubbed with the title: abstract_ai_Progress_Display_Methods
+ was described as: The provided script defines two methods within an unidentified Python class, likely part of the 'abstract_ai' module. These methods, 'get_dots' and 'update_progress_chunks', are intended to update the progress bar and status in the Graphical User Interface (GUI) as the module processes chunks of data in its interaction with the GPT-3 API.
+
+The 'get_dots' method manages a dynamic visual display of progress, while 'update_progress_chunks' manages the progress bar and text status in the UI depending on the number of chunks processed. If the process is completed, it updates the UI with a sent status and re-enables the 'SUBMIT_QUERY' button. This script contributes significantly towards enabling the user to track and understand the status of their queries with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/query_events.py
+ dubbed with the title: abstract_ai_module_query_event_check_function
+ was described as: The provided script is a part of an unknown python file within the abstract_ai Python module. The file contains a definition for the function \'query_event_check\'. This function checks if a query event has been triggered; if so, and no submission is currently in progress, it initiates a new API query. This is accomplished by creating a new API call name, and submitting the coroutine to the event loop. The function then attaches a callback function to handle the future result of the coroutine. If a submission is already in progress, it logs an information message stating "Submission already in progress." If another event type is detected, it simply returns false. This function is presumably part of a class handling the communication and management of API queries to the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/response_section.py
+ dubbed with the title: gpt_classes_gpt_manager_response_section_part1
+ was described as: This script, 'response_section.py' (chunk 1 of 6), is part of the response section within the gpt_manager of the gpt_classes submodule in the abstract_ai Python module. It includes an import statement for dependencies, which appears to include utility functions or classes necessary for handling responses from the GPT-3 API. The script defines several functions for managing responses from the OpenAI GPT-3 API.\n\nThe 'update_response_mgr' method updates the ResponseManager with prompt and API managers, presumably refreshing its state or providing it with up-to-date data.\n\nThe 'get_new_api_call_name' method generates a new unique API call name and adds it to a list of API call names. This function is used to identify and manage individual API calls uniquely.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/__init__.py
+ dubbed with the title: Init_Script_Description_of_Abstract_Ai_GPT_Manager_Test_Section
+ was described as: The __init__.py file located in the test_section of abstract_ai GPT manager appears to import everything from the module "test_management". This suggests that "test_management" likely contains various classes, methods, or variables that are used for testing different aspects or functionalities within the abstract_ai module. The fact that these are being imported in the __init__.py file means they are made readily accessible for other scripts that may import the test_section.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/test_management.py
+ dubbed with the title: abstract_ai_check_test_bool_function
+ was described as: The provided script is the first of four chunks from an undisclosed python file within the abstract_ai Python module. In this script, a function named 'check_test_bool' is defined. This function checks the status of the 'self.test_bool' attribute, likely within the scope of a specific class, which remains unidentified in this context. The function does not appear to take in any arguments besides 'self', implying it operates on the instance attributes of the class to which it belongs. The function performs no explicit operations and its intended effect or use is unclear without additional context. It's accompanied by a docstring, providing a brief explanation of the function's purpose, though this particular docstring does not offer any substantial information about the function itself.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/__init__.py
+ dubbed with the title: abstract_ai_url_section_initializer
+ was described as: The provided script is the '__init__.py' file in the 'url_section' of the 'gpt_manager' directory, within the 'gpt_classes' submodule of the 'abstract_ai' Python module. This '__init__.py' file is responsible for importing all classes, functions, and variables from the 'url_management' module. The 'url_management' module likely contains functionalities related to management and processing of URLs in interacting with and controlling the OpenAI GPT-3 API calls. The '__init__.py' script ensures that these URL handling functionalities are readily accessible within the 'abstract_ai' module, contributing to the module's streamlined process of managing requests, responses, and behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/url_management.py
+ dubbed with the title: abstract_ai_Append_Output_and_Get_URL_Functions
+ was described as: The provided script chunk is part of an undisclosed python file within the 'abstract_ai' Python module. It defines two methods: 'append_output' and 'get_url'. 'append_output' appends a line of text to the 'other' section of feedback on the Graphical User Interface (GUI). It takes 'self' and two arguments, 'key' and 'new_content', the latter of which is the line of text to be added. The 'get_url' method retrieves the URL entered by the user in the corresponding input field of the GUI. It contains conditions to handle the possibility of the URL being 'None', checking the 'URL_LIST' for a potential URL. The methods are likely part of a class that handles user interactions with the GUI, particularly in retrieving URL data input, and updating the feedback on the interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/__init__.py
+ dubbed with the title: abstract_ai_window_section_initializer
+ was described as: The script provided represents the '__init__.py' file in the 'window_section' of the 'gpt_manager' subfolder located in the 'gpt_classes' subfolder of the 'abstract_ai' Python module. Its function is to enable the importation of all functionalities from the 'window_management' module. The 'window_management' module is likely to include classes, functions, and variables that facilitate user interaction with the OpenAI GPT-3 API through various windows in a graphical user interface (GUI). This '__init__.py' file ensures these functionalities are made accessible throughout the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/window_management.py
+ dubbed with the title: Abstract_AI_Window_Management_Readme_Event_Function
+ was described as: The provided chunk is part 1 of 11 from 'window_management.py', which is located in the 'window_section' directory under the 'gpt_manager' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This chunk of the script introduces imports from dependencies and defines a function named 'readme_event_check'. This function, which is an instance method within a class, checks whether the 'Generate README' event has been triggered. Judging by the method's title and documentation, it likely plays a crucial role in generating a comprehensive README for the AI model, possibly summarizing its behavior, functionalities, or outcomes. As such, this script appears to be responsible for managing critical components of the abstract_ai Python module's graphic user interface, specifically focusing on events related to generating README files.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder.py
+ dubbed with the title: Abstract_AI_InstructionBuilder_Module_Description
+ was described as: The script "InstructionBuilder.py" in Abstract_AI Python module contains a class "InstructionManager" which is used for managing user's instructions. This includes a set of default instructions and methods for handling and utilizing these instructions such as creating new instructions, updating existing ones, getting the current instructions and adding new ones. The instructions consist of instructions text, example values, and a default state of execution. This utility seems to be the core part of structuring user’s responses in a specified format and controlling the API call behavior.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder_nogui.py
+ dubbed with the title: abstract_ai_instructionBuilder_py_module_chunk1
+ was described as: The provided script is a small chunk of the "InstructionBuilder.py" file found in the "instruction_selection" folder from the "gpt_classes" subdirectory within the "abstract_ai" Python module. It includes a function named "text_to_key", which accepts two parameters: text and section.\n\nThis function appears to transform a text description into a GUI key, primarily based on the section input parameter. The function removes the spaces from the text description and replaces them with underscores, converts the resultant string to uppercase, and then concatenates it with the section name (delimited by an underscore), thereby forming a key string.The produced key string can be used as an identifying key for user interface elements in the graphical user interface (GUI) of the module, ensuring each component is uniquely identifiable for user interaction, state updates, or referencing. This function might be critical in setting up the GUI for the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionManager_nogui.py
+ dubbed with the title: Import_of_Data_Processing_Functions_in_Abstract_AI_Module
+ was described as: The provided script chunk is part 1 of 17 from an unspecified file within the abstract_ai Python module. It imports 'get_actual_number' and 'eatAll' functions from abstract_utilities. Additionally, it imports 'is_bool' function from the type_utils module, present within abstract_utilities. These imported functions suggest the script deals with processing and type checking of input data. 'get_actual_number' likely assists in processing numerical data, 'eatAll' might help in data consumption or parsing, while 'is_bool' is useful in checking boolean data types. While we lack the full context to assess the script's entire functionality, from this isolated chunk, we can infer that it is designed to handle and process various types of data, possibly in preparation for interactions with the OpenAI GPT-3 API.
+
+/n/n
+
+please overview the script provided in the chunk_data and derive a description/summary of the script as it relates to the module; this will later be amalgamated with the various portions of the whole module descriptions to create a comprehensive readme
+
+-----------------------------------------------------------------------------
+#chunk_data#
+
+this is chunk 1 of 1
+
+from .InstructionBuilder import *
+from .InstructionBuilder_nogui import *
+ was described as: This is the reply to your request.
+
+/n/n in the script: src/abstract_ai/gpt_classes/model_selection/ModelBuilder.py
+ dubbed with the title: Short_Title_for_Query'}
+-----------------------------------------------------------------------------
+#prompt#
+
+the data provided is ModelBuilder.py from partial path src/abstract_ai/gpt_classes/model_selection/ModelBuilder.py in 📦 **abstract_ai** v0.2.1.102
+> abstract_ai is a Python module that serves as a bridge between your application and the OpenAI GPT-3 API. It provides a convenient interface for sending requests, managing responses, and controlling the behavior of the API calls. This module is highly customizable, allowing you to establish prompts, instructions, and response handling logic.
+
+👤 Author: putkoff (partners@abstractendeavors.com)
+🪪 License: Unknown License
+
+🏷️ Classifiers:
+  - Development Status :: 3 - Alpha
+  - Intended Audience :: Developers
+  - License :: OSI Approved :: MIT License
+  - Programming Language :: Python :: 3
+  - Programming Language :: Python :: 3.11
+
+📦 Dependencies:
+  - abstract_database
+  - abstract_security>=0.0.1
+  - abstract_webtools>=0.1.4.90
+  - tiktoken>=0.5.1
+  - abstract_utilities>=0.2.2.1
+  - abstract_gui>=0.0.60.0
+  - pyperclip>=1.8.2
+  - openai>=0.28.1
+  - requests>=2.31.0
+  - nltk>=3.8.1
+  - python-docx
+
+ here is a synopsis of the previous scripts:  in the script: src/abstract_ai/__init__.py
+ dubbed with the title: abstract_ai_module_initializer
+ was described as: The provided script serves as an initializer for the 'abstract_ai' module, importing necessary classes and functions to enable the functionalities of the module. Key components imported include 'ApiManager', 'ModelManager', 'PromptManager', 'ResponseManager', and 'InstructionManager' which are responsible for controlling different aspects of interacting with the OpenAI GPT-3 API. Additionally, the module includes functionalities for setup and querying without a GUI, as well as for interaction with a database and an abstract AI GUI.
+
+/n/n in the script: src/abstract_ai/abstract_ai_gui.py
+ dubbed with the title: abstract_ai_gui_Function_Description
+ was described as: The abstract_ai_gui.py script in the abstract_ai v0.2.1.102 Python module contains a single function called abstract_ai_gui(). This function is responsible for maintaining the Graphical User Interface (GUI) of the module, serving as a bridge between the user interface and the GPT-3 API. It achieves this by importing and initializing the GptManager class from the gpt_classes.gpt_manager submodule. The GptManager class likely provides necessary methods and attributes for managing OpenAI GPT-3 API calls, analyzing responses, and controlling the behaviour of the API interaction.
+
+/n/n in the script: src/abstract_ai/documentation/abstract_example.py
+ dubbed with the title: abstract_ai_Abstracted_Script_Setup_and_Control
+ was described as: The provided script appears to be split into four distinct segments which build upon each other to create a foundational structure for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module.\n\nIn the first segment (ModelBuilder), a model manager object is created which sets up the selected model parameters, including the selection of the GPT-4 model and its corresponding endpoint and maximum token limit.\n\nThe second segment (ApiBuilder) sets up the API manager with either environment variables or direct API keys, establishing communication links with the OpenAI API.\n\nThe third segment (InstructionBuilder) establishes a series of instructions that control how the system interacts with queries, including the ability to control features like suggestions, prompt continuation, aborting, title generation, and handling of additional responses.\n\nThe last segment (PromptBuilder) sets up the prompt manager, taking in all the prior configurations together with the user's request and any related data, and computing the distribution of tokens between prompts, completions, and chunks. It also demonstrates handling of completion percentages, allowing the user to adjust this parameter to control how chunking is conducted.\n\nIn summary, the script showcases the interconnected working of class objects in the 'abstract_ai' Python module to send queries to the OpenAI GPT-3 API, manage responses, and control the behavior of the API call while optimizing token utilization.
+
+/n/n in the script: src/abstract_ai/for_react.py
+ dubbed with the title: Analysis_of_for_react_script_in_abstract_ai_module
+ was described as: The provided script is responsible for parsing and analyzing JavaScript/TypeScript (including JSX/TSX) files, mainly related to React components. It uses the '@babel/parser' and '@babel/traverse' packages to traverse and parse the Abstract Syntax Tree (AST) of the file. It extracts important entities including import declarations, React functional components, and React class components as well as their dependencies. There are multiple functions to extract specific parts of the code, like import lines or code blocks for specific components.
+
+A 'ReactAnalyser' class is defined to manage this process, with methods to retrieve components, imports, and dependencies. On the GUI part of the code, a 'React Component Browser' is created where users can select a file and load components. Users can view dependencies of selected components, save components to a certain location, and manage files in this browser.
+
+The script is one part of the abstract_ai module suite, which is aimed at providing interfaces and tools to work with AI and ML functionalities. From the perspective of the whole module, this script contributes to handling and analyzing React files, which could be part of the data input, preprocessing, or AI model generation / training stages.
+
+/n/n in the script: src/abstract_ai/gpt_classes/__init__.py
+ dubbed with the title: abstract_ai_module_gpt_classes_initializer
+ was described as: The script provided serves as the initializer for the 'gpt_classes' submodule within the 'abstract_ai' module. It is responsible for setting up the different classes that interact with and control the behavior of the OpenAI GPT-3 API. Each imported file corresponds to a specific class.
+
+The 'response_selection' manages the response handling logic, while 'prompt_selection' is responsible for establishing prompts. The 'model_selection' sets up the models to be used, and 'instruction_selection' sets up the instructions to control queries. The 'api_selection' file sets up the API manager, while 'nogui_selection' provides functionalities for setup and querying without a GUI.
+
+In summary, this script serves to unify the different components for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module, streamlining the process of sending requests, managing responses, and controlling the behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/ApiBuilder.py
+ dubbed with the title: abstract_ai_module_ApiBuilder_Description
+ was described as: The provided Python script 'ApiBuilder.py' in the 'abstract_ai' module defines a class called 'ApiManager'. This class is responsible for managing the OpenAI API keys and headers used for communicating with OpenAI's GPT-3 API. The key features of this class include retrieving the API key, possibly from environment variables, loading the key for subsequent use in API requests, and constructing authorization headers for the API calls. To allow flexibility, the 'ApiManager' allows for custom content_type, api_env (environment variable name for API key), headers, and environment path for API key. These can also be defaulted to 'application/json', 'OPENAI_API_KEY', a call to 'get_header' method, and none, respectively. The 'get_openai_key' method retrieves the API key, the 'load_openai_key' method stores the API key in the openai module for API calls, and 'get_header' method generates the required headers for the requests. Ultimately, the 'ApiManager' serves as a key part of the 'abstract_ai' module, streamlining the process of configuring and managing the essential parameters for successful communication with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/__init__.py
+ dubbed with the title: abstract_ai_api_selection_initializer_description
+ was described as: The provided script is the __init__.py file located in the api_selection directory of the gpt_classes submodule from the abstract_ai Python module. This script is responsible for importing all the classes and functions defined in the ApiBuilder.py file. The ApiBuilder class enables management of API keys and headers necessary for communication with the OpenAI GPT-3 API, offering functionalities such as retrieving the API key from environment variables, loading it for API requests, and constructing authorization headers. In essence, this __init__.py script ensures that the classes and functions necessary for managing the GPT-3 API communication setup are readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/classes.py
+ dubbed with the title: abstract_ai_module_response_management_tests
+ was described as: The provided script appears to part of a test suite for the abstract_ai Python module, specifically focusing on response management. This involves a variety of classes and methods that work together to handle and manage API call responses from the GPT-3 AI. Chief among these is the ResponseManager class which appears to deal with generating and managing API call responses. 
+
+There are methods for generating new API call names, managing an asynchronous event loop for queries, handling future results from API calls, submitting events and queries, updating progress visuals in the UI, checking if the Response Manager has completed the query process, and one for managing the process of submitting queries to the GPT AI. Event and query handlers also play a pivotal role in managing and controlling the flow of requests and responses. 
+
+In summary, this chunk of the script ensures the response results from the GPT-3 AI are correctly processed, handled, and presented. It also handles exception handling, logging, and status updates for the response management process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/test_function.py
+ dubbed with the title: abstract_ai_Test_Function_Description
+ was described as: The script provided contains a single function named 'testFunc'. This method is a part of a class, as evidenced by the 'self' parameter. The purpose of this function is to print the message 'this test worked' to the console when called. This function likely serves as a test or placeholder within the 'abstract_ai' module, possibly used to confirm successful implementation or connectivity of a feature or service as a part of the module's testing process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/JsonHandler.py
+ dubbed with the title: JsonHandler_Functions_in_abstract_ai_Module
+ was described as: The provided script is named 'JsonHandler.py', found within the file_section of the gpt_classes directory in the abstract_ai Python module. It is comprised of several functions for managing JSON files and strings. Key features of this script include reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings. Here is a brief overview of the functions:
+
+1) 'read_saved_json(file_path)' opens, reads, and loads a JSON file at the given file path, returning the JSON data.
+
+2) 'read_docx(file_path)' reads and prints the text of each paragraph in a Microsoft Word document (.docx file) at the specified path, excluding newline characters, tabs, and spaces.
+
+3) 'replace_place_holder_ends(string,placeholder)' replaces parts of a string, from the position of a specified placeholder to the end of the string.
+
+4) 'process_all_strins(all_temp_string,strings,all_js)' processes temporary strings, replacing placeholders.
+
+5) 'fix_malformed_json(malformed_json_string)' processes a malformed JSON string and fixes it, returning a correctly formatted JSON object.
+
+6) 'preprocess_string(s)' replaces certain characters in a string with placeholders to prevent them from interfering with JSON processing.
+
+7) 'postprocess_string(s)' reverses the replacements made by 'preprocess_string(s)'.
+
+8) 'replace(data)' uses a regular expression (regex) to globally substitute certain character sequences in a string, with specific emphasis on sequences involving single quotation marks.
+
+In essence, 'JsonHandler.py' is a utility script in the 'abstract_ai' module that aids with processing, managing, and handling exceptions related to working with JSON data.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/__init__.py
+ dubbed with the title: abstract_ai_file_section_initializer
+ was described as: The provided script serves as part of the '__init__.py' file for the 'file_section' directory within the 'gpt_classes' submodule of the 'abstract_ai' module. This script is responsible for importing all the classes and functions defined in 'JsonHandler.py' and 'responseContentParser.py'. These imported scripts are crucial to the functionality of the 'abstract_ai' module.
+
+The 'JsonHandler.py' script contains several functions for managing JSON files and strings. This includes reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings.
+
+The 'responseContentParser.py' script is likely to contain functionalities related to parsing the content of responses from the OpenAI GPT-3 API. These may include extracting specific information, handling different response formats, and processing the API's output for use within the rest of the module.
+
+Overall, this part of the '__init__.py' file is fundamental for importing necessary functionalities related to JSON handling and response content parsing within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/responseContentParser.py
+ dubbed with the title: responseContentParser_chunk1_prompt_content_extraction
+ was described as: The provided script is a part from 'responseContentParser.py' in the 'file_section' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This script defines a function called 'get_prompt_content(data)'. This function is designed to extract the content of the prompt from the response of the OpenAI GPT-3 API.\n\nThe function accepts a 'data' argument, which is likely the response data from the GPT-3 API. It uses the 'get_any_value' utility method from the 'abstract_utilities' module to access nested keys within the response data. First, it retrieves the 'prompt' key's value from the response data and assigns it to 'prompt_data'. Next, it obtains the 'messages' from 'prompt_data', which is assigned to 'message_data'.\n\nIf 'message_data' is a list and is not empty, the function attempts to safely load the first element of 'message_data' as a JSON string using 'safe_json_loads()'. This is done to handle cases where the 'message' of the response is formatted as a JSON string. Finally, it retrieves the 'content' key from 'message_data', which is the actual content of the prompt.\n\nIn summary, 'get_prompt_content(data)' function is responsible for extracting the content of the prompt from the GPT-3 API response within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/GptManager.py
+ dubbed with the title: GptManager_Class_In_Abstract_AI_Module
+ was described as: The GptManager.py script in the provided module, "abstract_ai", defines the complex GptManager class which manages the various aspects of AI interactions. The GptManager class controls features like window management, browser management, next read management, threading, history management, model management, and instruction management. The class has multiple methods for updating and managing values for the model, API, and instructions. It also handles events related to model and instructions, as well as the submission of queries. This class is critical to the functionality and operability of the module as it not only ensures efficient querying and communication with the OpenAI GPT-3 API but also maintains and updates the parameters of the API. The class also has safety measures to handle exceptions and errors in the communication process, thus ensuring reliability and smooth operation.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/__init__.py
+ dubbed with the title: GptManager_Class_Import_in_gpt_manager_Module
+ was described as: The provided script is the __init__.py file located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. The script is responsible for importing the GptManager class from the GptManager.py file located in the same directory. The GptManager class plays a pivotal role in interacting with and controlling various aspects of the OpenAI GPT-3 API. Accordingly, this __init__.py file ensures that the GptManager class is readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/dependencies.py
+ dubbed with the title: gpt_manager_dependencies_chunk1
+ was described as: The provided data in this chunk is the first part of the script titled 'dependencies.py', located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. However, the chunk does not offer any concrete scripts and merely contains a section comment indicating '# DEPENDENCIES #'. Without more information related to actual dependencies being imported or utilised in the file, it's not feasible to derive a definitive understanding or description of this script in the context of the abstract_ai module. The completion of this script would ideally provide details on specific Python packages or modules being imported, which are crucial for the functionality of the rest of the scripts in the module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/__init__.py
+ dubbed with the title: abstract_ai_instruction_section_initializer
+ was described as: The provided chunk is the "__init__.py" file located in the "instruction_section" directory of the "gpt_manager" subdirectory, within the "gpt_classes" submodule of the "abstract_ai" Python module. From the line of code in this chunk, it can be inferred that the "__init__.py" file in "instruction_section" is responsible for importing everything (indicated by the asterisk) from the "instruction_management" module. This would likely include classes, functions, and variables defined in the "instruction_management" module that are instrumental for managing and controlling the behavior of the OpenAI GPT-3 API. Instructions in this context likely refer to the necessary parameters and configurations used to influence how the system interacts with its queries, enabling the user to control various features like suggestions, prompt continuation, aborting, and title generation. Overall, this script ensures that the instructions related functionalities are readily accessible within the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/instruction_management.py
+ dubbed with the title: abstract_ai_instruction_management
+ was described as: The provided script, a part of the 'instruction_management.py' located in the 'instruction_section' directory of the 'gpt_classes/gpt_manager' submodule in the 'abstract_ai' Python module, contains parts of the code for managing and updating instructions in the abstract_ai module's Graphical User Interface (GUI).\n\nThree functions are defined: 'update_instruction_mgr', 'update_bool_instructions', and 'restore_instruction_defaults'.\n\nThe 'update_instruction_mgr' function updates the Instruction Manager with environment values from the GUI, handling specific user adjustments for instructions and reflecting them on the Instruction Manager's attributes. If the '-instructions-' key in the GUI is set, it updates each instruction key accordingly.\n\nThe 'update_bool_instructions' function sets the 'api_response' key as true and updates user adjustments on boolean instruction values in the GUI, ensuring the Instruction Manager reflects the current state of boolean instructions set by the user.\n\nLastly, the 'restore_instruction_defaults' function restores the instructions to their default state as defined in the Instruction Manager. It does this by updating each command key in the GUI with its corresponding default value captured from the Instruction Manager. Overall, this script is essential for the flexible handling and adjustment of instructions during the usage of the abstract_ai module, ensuring a dynamic interaction between the user and the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/__init__.py
+ dubbed with the title: abstract_ai_prompt_section_initializer
+ was described as: The provided script is an __init__.py file located in the 'prompt_section' directory of the 'gpt_manager' of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This file is responsible for importing all classes, functions, and variables from the 'prompt_management' module. This implies that the 'prompt_management' module likely contains definitions and functionalities necessary for managing prompts when interacting with the OpenAI GPT-3 API. This functionality includes defining and modifying prompts, setting rules for prompts, and other related tasks. In conclusion, the __init__.py file in the 'prompt_section' streamlines the import of critical prompt management functionalities to the 'abstract_ai' module, enhancing its efficiency and ease in handling prompts while interacting with the OpenAI API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/prompt_management.py
+ dubbed with the title: abstract_ai_module_prompt_management_overview
+ was described as: The script 'prompt_management.py' exists within the module 'abstract_ai', primarily serving functions related to the interaction with the OpenAI GPT-3 API. Initiating with dependency imports, the script continues to initialize the prompt manager and prepare it for GPT-3 querying. The script provides a variety of functions that work in conjunction with user interface such as updating request and prompt data lists, checking if events related to prompting or requesting data occurred, managing history events, updating the query display and handling navigation events. Furthermore, the script also facilitates actions like adding user’s request to request chunk, updating chunk data and performing some actions based on specific events in the user interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/__init__.py
+ dubbed with the title: abstract_ai_response_section_initializer
+ was described as: The provided script is the __init__.py file located in the 'response_section' directory within the 'gpt_manager' submodule of the 'gpt_classes' within the 'abstract_ai' Python module. This file suggests that the 'response_section' directory consists of several Python files including 'output_display.py', 'output_file_utils.py', 'output_response.py', 'progress_display.py', 'query_events.py', and 'response_section.py'.
+
+Each of these files presumably contains different aspects of handling the response received from the OpenAI GPT-3 API and displaying or processing it accordingly. For instance, 'output_display.py' and 'output_response.py' might handle the displaying of the generated result. 'progress_display.py' might track the execution of the OpenAI API call, and 'query_events.py' could handle the events occurring in filing the API queries. 'output_file_utils.py' might include utilities for handling response output for static files.
+
+In summary, this initializer script plays a crucial role in consolidating all the response handling functionalities of the 'abstract_ai' module, which make it easier to interact with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_display.py
+ dubbed with the title: Output_Display_Portion_in_abstract_ai_Response_Section
+ was described as: The provided script is chunk 1 of 3 from 'output_display.py' located in 'response_section' directory within the 'gpt_manager' submodule of 'abstract_ai' Python module. The given functions in this script file are responsible for the management and display of the latest output from the OpenAI GPT-3 API in the Graphical User Interface (GUI). There are three functions in this chunk: 'initialize_output_display', 'get_output_display_numbers', and 'determine_output_display'. The 'initialize_output_display' function sets up the GUI for displaying the latest output. If any latest output exists, it saves it into 'current_output'. The 'get_output_display_numbers' function retrieves the actual and display numbers for managing output navigation.5 Finally, 'determine_output_display', which likely takes a navigation event as an argument, will decide which output to display based on this event.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_file_utils.py
+ dubbed with the title: abstract_ai_Listbox_Event_Check_Function
+ was described as: The provided script is chunk 1 of 9 from an unidentified file in the Python 'abstract_ai' module. The script defines a single function 'listbox_event_check'. The function is an instance method taking the 'self' parameter, indicating that it is part of a class. The function checks if an event is triggered in a listbox - a graphical user interface element that displays a list of options to the user. If such an event is triggered, this function updates the GUI accordingly. Given the function's purpose, it is likely part of a GUI management class within the 'abstract_ai' module, responsible for handling user interactions and updating the interface in response to these interactions.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_response.py
+ dubbed with the title: abstract_ai_get_output_response_function
+ was described as: The provided script, denoting chunk 1 of 2 from an unidentified file in the 'abstract_ai' Python module, defines the 'get_output_response' method. This method is devised to format the output string of a response in a clear, readable manner. It includes integral information about the model, title, user's request, and the AI's response. The function accepts parameters for 'model', 'title', 'request', 'response', and 'output_files', and formats it in a certain order with appropriate new lines for readability. Once formatted, the output string is returned. This function is likely part of a larger class or module responsible for managing and formatting responses from the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/progress_display.py
+ dubbed with the title: abstract_ai_Progress_Display_Methods
+ was described as: The provided script defines two methods within an unidentified Python class, likely part of the 'abstract_ai' module. These methods, 'get_dots' and 'update_progress_chunks', are intended to update the progress bar and status in the Graphical User Interface (GUI) as the module processes chunks of data in its interaction with the GPT-3 API.
+
+The 'get_dots' method manages a dynamic visual display of progress, while 'update_progress_chunks' manages the progress bar and text status in the UI depending on the number of chunks processed. If the process is completed, it updates the UI with a sent status and re-enables the 'SUBMIT_QUERY' button. This script contributes significantly towards enabling the user to track and understand the status of their queries with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/query_events.py
+ dubbed with the title: abstract_ai_module_query_event_check_function
+ was described as: The provided script is a part of an unknown python file within the abstract_ai Python module. The file contains a definition for the function \'query_event_check\'. This function checks if a query event has been triggered; if so, and no submission is currently in progress, it initiates a new API query. This is accomplished by creating a new API call name, and submitting the coroutine to the event loop. The function then attaches a callback function to handle the future result of the coroutine. If a submission is already in progress, it logs an information message stating "Submission already in progress." If another event type is detected, it simply returns false. This function is presumably part of a class handling the communication and management of API queries to the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/response_section.py
+ dubbed with the title: gpt_classes_gpt_manager_response_section_part1
+ was described as: This script, 'response_section.py' (chunk 1 of 6), is part of the response section within the gpt_manager of the gpt_classes submodule in the abstract_ai Python module. It includes an import statement for dependencies, which appears to include utility functions or classes necessary for handling responses from the GPT-3 API. The script defines several functions for managing responses from the OpenAI GPT-3 API.\n\nThe 'update_response_mgr' method updates the ResponseManager with prompt and API managers, presumably refreshing its state or providing it with up-to-date data.\n\nThe 'get_new_api_call_name' method generates a new unique API call name and adds it to a list of API call names. This function is used to identify and manage individual API calls uniquely.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/__init__.py
+ dubbed with the title: Init_Script_Description_of_Abstract_Ai_GPT_Manager_Test_Section
+ was described as: The __init__.py file located in the test_section of abstract_ai GPT manager appears to import everything from the module "test_management". This suggests that "test_management" likely contains various classes, methods, or variables that are used for testing different aspects or functionalities within the abstract_ai module. The fact that these are being imported in the __init__.py file means they are made readily accessible for other scripts that may import the test_section.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/test_management.py
+ dubbed with the title: abstract_ai_check_test_bool_function
+ was described as: The provided script is the first of four chunks from an undisclosed python file within the abstract_ai Python module. In this script, a function named 'check_test_bool' is defined. This function checks the status of the 'self.test_bool' attribute, likely within the scope of a specific class, which remains unidentified in this context. The function does not appear to take in any arguments besides 'self', implying it operates on the instance attributes of the class to which it belongs. The function performs no explicit operations and its intended effect or use is unclear without additional context. It's accompanied by a docstring, providing a brief explanation of the function's purpose, though this particular docstring does not offer any substantial information about the function itself.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/__init__.py
+ dubbed with the title: abstract_ai_url_section_initializer
+ was described as: The provided script is the '__init__.py' file in the 'url_section' of the 'gpt_manager' directory, within the 'gpt_classes' submodule of the 'abstract_ai' Python module. This '__init__.py' file is responsible for importing all classes, functions, and variables from the 'url_management' module. The 'url_management' module likely contains functionalities related to management and processing of URLs in interacting with and controlling the OpenAI GPT-3 API calls. The '__init__.py' script ensures that these URL handling functionalities are readily accessible within the 'abstract_ai' module, contributing to the module's streamlined process of managing requests, responses, and behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/url_management.py
+ dubbed with the title: abstract_ai_Append_Output_and_Get_URL_Functions
+ was described as: The provided script chunk is part of an undisclosed python file within the 'abstract_ai' Python module. It defines two methods: 'append_output' and 'get_url'. 'append_output' appends a line of text to the 'other' section of feedback on the Graphical User Interface (GUI). It takes 'self' and two arguments, 'key' and 'new_content', the latter of which is the line of text to be added. The 'get_url' method retrieves the URL entered by the user in the corresponding input field of the GUI. It contains conditions to handle the possibility of the URL being 'None', checking the 'URL_LIST' for a potential URL. The methods are likely part of a class that handles user interactions with the GUI, particularly in retrieving URL data input, and updating the feedback on the interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/__init__.py
+ dubbed with the title: abstract_ai_window_section_initializer
+ was described as: The script provided represents the '__init__.py' file in the 'window_section' of the 'gpt_manager' subfolder located in the 'gpt_classes' subfolder of the 'abstract_ai' Python module. Its function is to enable the importation of all functionalities from the 'window_management' module. The 'window_management' module is likely to include classes, functions, and variables that facilitate user interaction with the OpenAI GPT-3 API through various windows in a graphical user interface (GUI). This '__init__.py' file ensures these functionalities are made accessible throughout the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/window_management.py
+ dubbed with the title: Abstract_AI_Window_Management_Readme_Event_Function
+ was described as: The provided chunk is part 1 of 11 from 'window_management.py', which is located in the 'window_section' directory under the 'gpt_manager' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This chunk of the script introduces imports from dependencies and defines a function named 'readme_event_check'. This function, which is an instance method within a class, checks whether the 'Generate README' event has been triggered. Judging by the method's title and documentation, it likely plays a crucial role in generating a comprehensive README for the AI model, possibly summarizing its behavior, functionalities, or outcomes. As such, this script appears to be responsible for managing critical components of the abstract_ai Python module's graphic user interface, specifically focusing on events related to generating README files.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder.py
+ dubbed with the title: Abstract_AI_InstructionBuilder_Module_Description
+ was described as: The script "InstructionBuilder.py" in Abstract_AI Python module contains a class "InstructionManager" which is used for managing user's instructions. This includes a set of default instructions and methods for handling and utilizing these instructions such as creating new instructions, updating existing ones, getting the current instructions and adding new ones. The instructions consist of instructions text, example values, and a default state of execution. This utility seems to be the core part of structuring user’s responses in a specified format and controlling the API call behavior.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder_nogui.py
+ dubbed with the title: abstract_ai_instructionBuilder_py_module_chunk1
+ was described as: The provided script is a small chunk of the "InstructionBuilder.py" file found in the "instruction_selection" folder from the "gpt_classes" subdirectory within the "abstract_ai" Python module. It includes a function named "text_to_key", which accepts two parameters: text and section.\n\nThis function appears to transform a text description into a GUI key, primarily based on the section input parameter. The function removes the spaces from the text description and replaces them with underscores, converts the resultant string to uppercase, and then concatenates it with the section name (delimited by an underscore), thereby forming a key string.The produced key string can be used as an identifying key for user interface elements in the graphical user interface (GUI) of the module, ensuring each component is uniquely identifiable for user interaction, state updates, or referencing. This function might be critical in setting up the GUI for the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionManager_nogui.py
+ dubbed with the title: Import_of_Data_Processing_Functions_in_Abstract_AI_Module
+ was described as: The provided script chunk is part 1 of 17 from an unspecified file within the abstract_ai Python module. It imports 'get_actual_number' and 'eatAll' functions from abstract_utilities. Additionally, it imports 'is_bool' function from the type_utils module, present within abstract_utilities. These imported functions suggest the script deals with processing and type checking of input data. 'get_actual_number' likely assists in processing numerical data, 'eatAll' might help in data consumption or parsing, while 'is_bool' is useful in checking boolean data types. While we lack the full context to assess the script's entire functionality, from this isolated chunk, we can infer that it is designed to handle and process various types of data, possibly in preparation for interactions with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/__init__.py
+ dubbed with the title: Short_Title_for_Query'}
+-----------------------------------------------------------------------------
+#prompt#
+
+the data provided is __init__.py from partial path src/abstract_ai/gpt_classes/instruction_selection/__init__.py in 📦 **abstract_ai** v0.2.1.102
+> abstract_ai is a Python module that serves as a bridge between your application and the OpenAI GPT-3 API. It provides a convenient interface for sending requests, managing responses, and controlling the behavior of the API calls. This module is highly customizable, allowing you to establish prompts, instructions, and response handling logic.
+
+👤 Author: putkoff (partners@abstractendeavors.com)
+🪪 License: Unknown License
+
+🏷️ Classifiers:
+  - Development Status :: 3 - Alpha
+  - Intended Audience :: Developers
+  - License :: OSI Approved :: MIT License
+  - Programming Language :: Python :: 3
+  - Programming Language :: Python :: 3.11
+
+📦 Dependencies:
+  - abstract_database
+  - abstract_security>=0.0.1
+  - abstract_webtools>=0.1.4.90
+  - tiktoken>=0.5.1
+  - abstract_utilities>=0.2.2.1
+  - abstract_gui>=0.0.60.0
+  - pyperclip>=1.8.2
+  - openai>=0.28.1
+  - requests>=2.31.0
+  - nltk>=3.8.1
+  - python-docx
+
+ here is a synopsis of the previous scripts:  in the script: src/abstract_ai/__init__.py
+ dubbed with the title: abstract_ai_module_initializer
+ was described as: The provided script serves as an initializer for the 'abstract_ai' module, importing necessary classes and functions to enable the functionalities of the module. Key components imported include 'ApiManager', 'ModelManager', 'PromptManager', 'ResponseManager', and 'InstructionManager' which are responsible for controlling different aspects of interacting with the OpenAI GPT-3 API. Additionally, the module includes functionalities for setup and querying without a GUI, as well as for interaction with a database and an abstract AI GUI.
+
+/n/n in the script: src/abstract_ai/abstract_ai_gui.py
+ dubbed with the title: abstract_ai_gui_Function_Description
+ was described as: The abstract_ai_gui.py script in the abstract_ai v0.2.1.102 Python module contains a single function called abstract_ai_gui(). This function is responsible for maintaining the Graphical User Interface (GUI) of the module, serving as a bridge between the user interface and the GPT-3 API. It achieves this by importing and initializing the GptManager class from the gpt_classes.gpt_manager submodule. The GptManager class likely provides necessary methods and attributes for managing OpenAI GPT-3 API calls, analyzing responses, and controlling the behaviour of the API interaction.
+
+/n/n in the script: src/abstract_ai/documentation/abstract_example.py
+ dubbed with the title: abstract_ai_Abstracted_Script_Setup_and_Control
+ was described as: The provided script appears to be split into four distinct segments which build upon each other to create a foundational structure for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module.\n\nIn the first segment (ModelBuilder), a model manager object is created which sets up the selected model parameters, including the selection of the GPT-4 model and its corresponding endpoint and maximum token limit.\n\nThe second segment (ApiBuilder) sets up the API manager with either environment variables or direct API keys, establishing communication links with the OpenAI API.\n\nThe third segment (InstructionBuilder) establishes a series of instructions that control how the system interacts with queries, including the ability to control features like suggestions, prompt continuation, aborting, title generation, and handling of additional responses.\n\nThe last segment (PromptBuilder) sets up the prompt manager, taking in all the prior configurations together with the user's request and any related data, and computing the distribution of tokens between prompts, completions, and chunks. It also demonstrates handling of completion percentages, allowing the user to adjust this parameter to control how chunking is conducted.\n\nIn summary, the script showcases the interconnected working of class objects in the 'abstract_ai' Python module to send queries to the OpenAI GPT-3 API, manage responses, and control the behavior of the API call while optimizing token utilization.
+
+/n/n in the script: src/abstract_ai/for_react.py
+ dubbed with the title: Analysis_of_for_react_script_in_abstract_ai_module
+ was described as: The provided script is responsible for parsing and analyzing JavaScript/TypeScript (including JSX/TSX) files, mainly related to React components. It uses the '@babel/parser' and '@babel/traverse' packages to traverse and parse the Abstract Syntax Tree (AST) of the file. It extracts important entities including import declarations, React functional components, and React class components as well as their dependencies. There are multiple functions to extract specific parts of the code, like import lines or code blocks for specific components.
+
+A 'ReactAnalyser' class is defined to manage this process, with methods to retrieve components, imports, and dependencies. On the GUI part of the code, a 'React Component Browser' is created where users can select a file and load components. Users can view dependencies of selected components, save components to a certain location, and manage files in this browser.
+
+The script is one part of the abstract_ai module suite, which is aimed at providing interfaces and tools to work with AI and ML functionalities. From the perspective of the whole module, this script contributes to handling and analyzing React files, which could be part of the data input, preprocessing, or AI model generation / training stages.
+
+/n/n in the script: src/abstract_ai/gpt_classes/__init__.py
+ dubbed with the title: abstract_ai_module_gpt_classes_initializer
+ was described as: The script provided serves as the initializer for the 'gpt_classes' submodule within the 'abstract_ai' module. It is responsible for setting up the different classes that interact with and control the behavior of the OpenAI GPT-3 API. Each imported file corresponds to a specific class.
+
+The 'response_selection' manages the response handling logic, while 'prompt_selection' is responsible for establishing prompts. The 'model_selection' sets up the models to be used, and 'instruction_selection' sets up the instructions to control queries. The 'api_selection' file sets up the API manager, while 'nogui_selection' provides functionalities for setup and querying without a GUI.
+
+In summary, this script serves to unify the different components for interacting with the OpenAI GPT-3 API within the 'abstract_ai' module, streamlining the process of sending requests, managing responses, and controlling the behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/ApiBuilder.py
+ dubbed with the title: abstract_ai_module_ApiBuilder_Description
+ was described as: The provided Python script 'ApiBuilder.py' in the 'abstract_ai' module defines a class called 'ApiManager'. This class is responsible for managing the OpenAI API keys and headers used for communicating with OpenAI's GPT-3 API. The key features of this class include retrieving the API key, possibly from environment variables, loading the key for subsequent use in API requests, and constructing authorization headers for the API calls. To allow flexibility, the 'ApiManager' allows for custom content_type, api_env (environment variable name for API key), headers, and environment path for API key. These can also be defaulted to 'application/json', 'OPENAI_API_KEY', a call to 'get_header' method, and none, respectively. The 'get_openai_key' method retrieves the API key, the 'load_openai_key' method stores the API key in the openai module for API calls, and 'get_header' method generates the required headers for the requests. Ultimately, the 'ApiManager' serves as a key part of the 'abstract_ai' module, streamlining the process of configuring and managing the essential parameters for successful communication with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/api_selection/__init__.py
+ dubbed with the title: abstract_ai_api_selection_initializer_description
+ was described as: The provided script is the __init__.py file located in the api_selection directory of the gpt_classes submodule from the abstract_ai Python module. This script is responsible for importing all the classes and functions defined in the ApiBuilder.py file. The ApiBuilder class enables management of API keys and headers necessary for communication with the OpenAI GPT-3 API, offering functionalities such as retrieving the API key from environment variables, loading it for API requests, and constructing authorization headers. In essence, this __init__.py script ensures that the classes and functions necessary for managing the GPT-3 API communication setup are readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/classes.py
+ dubbed with the title: abstract_ai_module_response_management_tests
+ was described as: The provided script appears to part of a test suite for the abstract_ai Python module, specifically focusing on response management. This involves a variety of classes and methods that work together to handle and manage API call responses from the GPT-3 AI. Chief among these is the ResponseManager class which appears to deal with generating and managing API call responses. 
+
+There are methods for generating new API call names, managing an asynchronous event loop for queries, handling future results from API calls, submitting events and queries, updating progress visuals in the UI, checking if the Response Manager has completed the query process, and one for managing the process of submitting queries to the GPT AI. Event and query handlers also play a pivotal role in managing and controlling the flow of requests and responses. 
+
+In summary, this chunk of the script ensures the response results from the GPT-3 AI are correctly processed, handled, and presented. It also handles exception handling, logging, and status updates for the response management process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/class_test/test_function.py
+ dubbed with the title: abstract_ai_Test_Function_Description
+ was described as: The script provided contains a single function named 'testFunc'. This method is a part of a class, as evidenced by the 'self' parameter. The purpose of this function is to print the message 'this test worked' to the console when called. This function likely serves as a test or placeholder within the 'abstract_ai' module, possibly used to confirm successful implementation or connectivity of a feature or service as a part of the module's testing process.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/JsonHandler.py
+ dubbed with the title: JsonHandler_Functions_in_abstract_ai_Module
+ was described as: The provided script is named 'JsonHandler.py', found within the file_section of the gpt_classes directory in the abstract_ai Python module. It is comprised of several functions for managing JSON files and strings. Key features of this script include reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings. Here is a brief overview of the functions:
+
+1) 'read_saved_json(file_path)' opens, reads, and loads a JSON file at the given file path, returning the JSON data.
+
+2) 'read_docx(file_path)' reads and prints the text of each paragraph in a Microsoft Word document (.docx file) at the specified path, excluding newline characters, tabs, and spaces.
+
+3) 'replace_place_holder_ends(string,placeholder)' replaces parts of a string, from the position of a specified placeholder to the end of the string.
+
+4) 'process_all_strins(all_temp_string,strings,all_js)' processes temporary strings, replacing placeholders.
+
+5) 'fix_malformed_json(malformed_json_string)' processes a malformed JSON string and fixes it, returning a correctly formatted JSON object.
+
+6) 'preprocess_string(s)' replaces certain characters in a string with placeholders to prevent them from interfering with JSON processing.
+
+7) 'postprocess_string(s)' reverses the replacements made by 'preprocess_string(s)'.
+
+8) 'replace(data)' uses a regular expression (regex) to globally substitute certain character sequences in a string, with specific emphasis on sequences involving single quotation marks.
+
+In essence, 'JsonHandler.py' is a utility script in the 'abstract_ai' module that aids with processing, managing, and handling exceptions related to working with JSON data.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/__init__.py
+ dubbed with the title: abstract_ai_file_section_initializer
+ was described as: The provided script serves as part of the '__init__.py' file for the 'file_section' directory within the 'gpt_classes' submodule of the 'abstract_ai' module. This script is responsible for importing all the classes and functions defined in 'JsonHandler.py' and 'responseContentParser.py'. These imported scripts are crucial to the functionality of the 'abstract_ai' module.
+
+The 'JsonHandler.py' script contains several functions for managing JSON files and strings. This includes reading and loading JSON files, processing JSON-containing strings, and handling exceptions for malformed JSON strings.
+
+The 'responseContentParser.py' script is likely to contain functionalities related to parsing the content of responses from the OpenAI GPT-3 API. These may include extracting specific information, handling different response formats, and processing the API's output for use within the rest of the module.
+
+Overall, this part of the '__init__.py' file is fundamental for importing necessary functionalities related to JSON handling and response content parsing within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/file_section/responseContentParser.py
+ dubbed with the title: responseContentParser_chunk1_prompt_content_extraction
+ was described as: The provided script is a part from 'responseContentParser.py' in the 'file_section' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This script defines a function called 'get_prompt_content(data)'. This function is designed to extract the content of the prompt from the response of the OpenAI GPT-3 API.\n\nThe function accepts a 'data' argument, which is likely the response data from the GPT-3 API. It uses the 'get_any_value' utility method from the 'abstract_utilities' module to access nested keys within the response data. First, it retrieves the 'prompt' key's value from the response data and assigns it to 'prompt_data'. Next, it obtains the 'messages' from 'prompt_data', which is assigned to 'message_data'.\n\nIf 'message_data' is a list and is not empty, the function attempts to safely load the first element of 'message_data' as a JSON string using 'safe_json_loads()'. This is done to handle cases where the 'message' of the response is formatted as a JSON string. Finally, it retrieves the 'content' key from 'message_data', which is the actual content of the prompt.\n\nIn summary, 'get_prompt_content(data)' function is responsible for extracting the content of the prompt from the GPT-3 API response within the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/GptManager.py
+ dubbed with the title: GptManager_Class_In_Abstract_AI_Module
+ was described as: The GptManager.py script in the provided module, "abstract_ai", defines the complex GptManager class which manages the various aspects of AI interactions. The GptManager class controls features like window management, browser management, next read management, threading, history management, model management, and instruction management. The class has multiple methods for updating and managing values for the model, API, and instructions. It also handles events related to model and instructions, as well as the submission of queries. This class is critical to the functionality and operability of the module as it not only ensures efficient querying and communication with the OpenAI GPT-3 API but also maintains and updates the parameters of the API. The class also has safety measures to handle exceptions and errors in the communication process, thus ensuring reliability and smooth operation.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/__init__.py
+ dubbed with the title: GptManager_Class_Import_in_gpt_manager_Module
+ was described as: The provided script is the __init__.py file located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. The script is responsible for importing the GptManager class from the GptManager.py file located in the same directory. The GptManager class plays a pivotal role in interacting with and controlling various aspects of the OpenAI GPT-3 API. Accordingly, this __init__.py file ensures that the GptManager class is readily available for use within the abstract_ai module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/dependencies.py
+ dubbed with the title: gpt_manager_dependencies_chunk1
+ was described as: The provided data in this chunk is the first part of the script titled 'dependencies.py', located in the gpt_manager directory of the gpt_classes submodule within the abstract_ai Python module. However, the chunk does not offer any concrete scripts and merely contains a section comment indicating '# DEPENDENCIES #'. Without more information related to actual dependencies being imported or utilised in the file, it's not feasible to derive a definitive understanding or description of this script in the context of the abstract_ai module. The completion of this script would ideally provide details on specific Python packages or modules being imported, which are crucial for the functionality of the rest of the scripts in the module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/__init__.py
+ dubbed with the title: abstract_ai_instruction_section_initializer
+ was described as: The provided chunk is the "__init__.py" file located in the "instruction_section" directory of the "gpt_manager" subdirectory, within the "gpt_classes" submodule of the "abstract_ai" Python module. From the line of code in this chunk, it can be inferred that the "__init__.py" file in "instruction_section" is responsible for importing everything (indicated by the asterisk) from the "instruction_management" module. This would likely include classes, functions, and variables defined in the "instruction_management" module that are instrumental for managing and controlling the behavior of the OpenAI GPT-3 API. Instructions in this context likely refer to the necessary parameters and configurations used to influence how the system interacts with its queries, enabling the user to control various features like suggestions, prompt continuation, aborting, and title generation. Overall, this script ensures that the instructions related functionalities are readily accessible within the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/instruction_section/instruction_management.py
+ dubbed with the title: abstract_ai_instruction_management
+ was described as: The provided script, a part of the 'instruction_management.py' located in the 'instruction_section' directory of the 'gpt_classes/gpt_manager' submodule in the 'abstract_ai' Python module, contains parts of the code for managing and updating instructions in the abstract_ai module's Graphical User Interface (GUI).\n\nThree functions are defined: 'update_instruction_mgr', 'update_bool_instructions', and 'restore_instruction_defaults'.\n\nThe 'update_instruction_mgr' function updates the Instruction Manager with environment values from the GUI, handling specific user adjustments for instructions and reflecting them on the Instruction Manager's attributes. If the '-instructions-' key in the GUI is set, it updates each instruction key accordingly.\n\nThe 'update_bool_instructions' function sets the 'api_response' key as true and updates user adjustments on boolean instruction values in the GUI, ensuring the Instruction Manager reflects the current state of boolean instructions set by the user.\n\nLastly, the 'restore_instruction_defaults' function restores the instructions to their default state as defined in the Instruction Manager. It does this by updating each command key in the GUI with its corresponding default value captured from the Instruction Manager. Overall, this script is essential for the flexible handling and adjustment of instructions during the usage of the abstract_ai module, ensuring a dynamic interaction between the user and the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/__init__.py
+ dubbed with the title: abstract_ai_prompt_section_initializer
+ was described as: The provided script is an __init__.py file located in the 'prompt_section' directory of the 'gpt_manager' of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This file is responsible for importing all classes, functions, and variables from the 'prompt_management' module. This implies that the 'prompt_management' module likely contains definitions and functionalities necessary for managing prompts when interacting with the OpenAI GPT-3 API. This functionality includes defining and modifying prompts, setting rules for prompts, and other related tasks. In conclusion, the __init__.py file in the 'prompt_section' streamlines the import of critical prompt management functionalities to the 'abstract_ai' module, enhancing its efficiency and ease in handling prompts while interacting with the OpenAI API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/prompt_section/prompt_management.py
+ dubbed with the title: abstract_ai_module_prompt_management_overview
+ was described as: The script 'prompt_management.py' exists within the module 'abstract_ai', primarily serving functions related to the interaction with the OpenAI GPT-3 API. Initiating with dependency imports, the script continues to initialize the prompt manager and prepare it for GPT-3 querying. The script provides a variety of functions that work in conjunction with user interface such as updating request and prompt data lists, checking if events related to prompting or requesting data occurred, managing history events, updating the query display and handling navigation events. Furthermore, the script also facilitates actions like adding user’s request to request chunk, updating chunk data and performing some actions based on specific events in the user interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/__init__.py
+ dubbed with the title: abstract_ai_response_section_initializer
+ was described as: The provided script is the __init__.py file located in the 'response_section' directory within the 'gpt_manager' submodule of the 'gpt_classes' within the 'abstract_ai' Python module. This file suggests that the 'response_section' directory consists of several Python files including 'output_display.py', 'output_file_utils.py', 'output_response.py', 'progress_display.py', 'query_events.py', and 'response_section.py'.
+
+Each of these files presumably contains different aspects of handling the response received from the OpenAI GPT-3 API and displaying or processing it accordingly. For instance, 'output_display.py' and 'output_response.py' might handle the displaying of the generated result. 'progress_display.py' might track the execution of the OpenAI API call, and 'query_events.py' could handle the events occurring in filing the API queries. 'output_file_utils.py' might include utilities for handling response output for static files.
+
+In summary, this initializer script plays a crucial role in consolidating all the response handling functionalities of the 'abstract_ai' module, which make it easier to interact with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_display.py
+ dubbed with the title: Output_Display_Portion_in_abstract_ai_Response_Section
+ was described as: The provided script is chunk 1 of 3 from 'output_display.py' located in 'response_section' directory within the 'gpt_manager' submodule of 'abstract_ai' Python module. The given functions in this script file are responsible for the management and display of the latest output from the OpenAI GPT-3 API in the Graphical User Interface (GUI). There are three functions in this chunk: 'initialize_output_display', 'get_output_display_numbers', and 'determine_output_display'. The 'initialize_output_display' function sets up the GUI for displaying the latest output. If any latest output exists, it saves it into 'current_output'. The 'get_output_display_numbers' function retrieves the actual and display numbers for managing output navigation.5 Finally, 'determine_output_display', which likely takes a navigation event as an argument, will decide which output to display based on this event.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_file_utils.py
+ dubbed with the title: abstract_ai_Listbox_Event_Check_Function
+ was described as: The provided script is chunk 1 of 9 from an unidentified file in the Python 'abstract_ai' module. The script defines a single function 'listbox_event_check'. The function is an instance method taking the 'self' parameter, indicating that it is part of a class. The function checks if an event is triggered in a listbox - a graphical user interface element that displays a list of options to the user. If such an event is triggered, this function updates the GUI accordingly. Given the function's purpose, it is likely part of a GUI management class within the 'abstract_ai' module, responsible for handling user interactions and updating the interface in response to these interactions.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/output_response.py
+ dubbed with the title: abstract_ai_get_output_response_function
+ was described as: The provided script, denoting chunk 1 of 2 from an unidentified file in the 'abstract_ai' Python module, defines the 'get_output_response' method. This method is devised to format the output string of a response in a clear, readable manner. It includes integral information about the model, title, user's request, and the AI's response. The function accepts parameters for 'model', 'title', 'request', 'response', and 'output_files', and formats it in a certain order with appropriate new lines for readability. Once formatted, the output string is returned. This function is likely part of a larger class or module responsible for managing and formatting responses from the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/progress_display.py
+ dubbed with the title: abstract_ai_Progress_Display_Methods
+ was described as: The provided script defines two methods within an unidentified Python class, likely part of the 'abstract_ai' module. These methods, 'get_dots' and 'update_progress_chunks', are intended to update the progress bar and status in the Graphical User Interface (GUI) as the module processes chunks of data in its interaction with the GPT-3 API.
+
+The 'get_dots' method manages a dynamic visual display of progress, while 'update_progress_chunks' manages the progress bar and text status in the UI depending on the number of chunks processed. If the process is completed, it updates the UI with a sent status and re-enables the 'SUBMIT_QUERY' button. This script contributes significantly towards enabling the user to track and understand the status of their queries with the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/query_events.py
+ dubbed with the title: abstract_ai_module_query_event_check_function
+ was described as: The provided script is a part of an unknown python file within the abstract_ai Python module. The file contains a definition for the function \'query_event_check\'. This function checks if a query event has been triggered; if so, and no submission is currently in progress, it initiates a new API query. This is accomplished by creating a new API call name, and submitting the coroutine to the event loop. The function then attaches a callback function to handle the future result of the coroutine. If a submission is already in progress, it logs an information message stating "Submission already in progress." If another event type is detected, it simply returns false. This function is presumably part of a class handling the communication and management of API queries to the OpenAI GPT-3 API.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/response_section.py
+ dubbed with the title: gpt_classes_gpt_manager_response_section_part1
+ was described as: This script, 'response_section.py' (chunk 1 of 6), is part of the response section within the gpt_manager of the gpt_classes submodule in the abstract_ai Python module. It includes an import statement for dependencies, which appears to include utility functions or classes necessary for handling responses from the GPT-3 API. The script defines several functions for managing responses from the OpenAI GPT-3 API.\n\nThe 'update_response_mgr' method updates the ResponseManager with prompt and API managers, presumably refreshing its state or providing it with up-to-date data.\n\nThe 'get_new_api_call_name' method generates a new unique API call name and adds it to a list of API call names. This function is used to identify and manage individual API calls uniquely.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/__init__.py
+ dubbed with the title: Init_Script_Description_of_Abstract_Ai_GPT_Manager_Test_Section
+ was described as: The __init__.py file located in the test_section of abstract_ai GPT manager appears to import everything from the module "test_management". This suggests that "test_management" likely contains various classes, methods, or variables that are used for testing different aspects or functionalities within the abstract_ai module. The fact that these are being imported in the __init__.py file means they are made readily accessible for other scripts that may import the test_section.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/test_section/test_management.py
+ dubbed with the title: abstract_ai_check_test_bool_function
+ was described as: The provided script is the first of four chunks from an undisclosed python file within the abstract_ai Python module. In this script, a function named 'check_test_bool' is defined. This function checks the status of the 'self.test_bool' attribute, likely within the scope of a specific class, which remains unidentified in this context. The function does not appear to take in any arguments besides 'self', implying it operates on the instance attributes of the class to which it belongs. The function performs no explicit operations and its intended effect or use is unclear without additional context. It's accompanied by a docstring, providing a brief explanation of the function's purpose, though this particular docstring does not offer any substantial information about the function itself.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/__init__.py
+ dubbed with the title: abstract_ai_url_section_initializer
+ was described as: The provided script is the '__init__.py' file in the 'url_section' of the 'gpt_manager' directory, within the 'gpt_classes' submodule of the 'abstract_ai' Python module. This '__init__.py' file is responsible for importing all classes, functions, and variables from the 'url_management' module. The 'url_management' module likely contains functionalities related to management and processing of URLs in interacting with and controlling the OpenAI GPT-3 API calls. The '__init__.py' script ensures that these URL handling functionalities are readily accessible within the 'abstract_ai' module, contributing to the module's streamlined process of managing requests, responses, and behavior of the API calls.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/url_section/url_management.py
+ dubbed with the title: abstract_ai_Append_Output_and_Get_URL_Functions
+ was described as: The provided script chunk is part of an undisclosed python file within the 'abstract_ai' Python module. It defines two methods: 'append_output' and 'get_url'. 'append_output' appends a line of text to the 'other' section of feedback on the Graphical User Interface (GUI). It takes 'self' and two arguments, 'key' and 'new_content', the latter of which is the line of text to be added. The 'get_url' method retrieves the URL entered by the user in the corresponding input field of the GUI. It contains conditions to handle the possibility of the URL being 'None', checking the 'URL_LIST' for a potential URL. The methods are likely part of a class that handles user interactions with the GUI, particularly in retrieving URL data input, and updating the feedback on the interface.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/__init__.py
+ dubbed with the title: abstract_ai_window_section_initializer
+ was described as: The script provided represents the '__init__.py' file in the 'window_section' of the 'gpt_manager' subfolder located in the 'gpt_classes' subfolder of the 'abstract_ai' Python module. Its function is to enable the importation of all functionalities from the 'window_management' module. The 'window_management' module is likely to include classes, functions, and variables that facilitate user interaction with the OpenAI GPT-3 API through various windows in a graphical user interface (GUI). This '__init__.py' file ensures these functionalities are made accessible throughout the 'abstract_ai' module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/gpt_manager/window_section/window_management.py
+ dubbed with the title: Abstract_AI_Window_Management_Readme_Event_Function
+ was described as: The provided chunk is part 1 of 11 from 'window_management.py', which is located in the 'window_section' directory under the 'gpt_manager' directory of the 'gpt_classes' submodule within the 'abstract_ai' Python module. This chunk of the script introduces imports from dependencies and defines a function named 'readme_event_check'. This function, which is an instance method within a class, checks whether the 'Generate README' event has been triggered. Judging by the method's title and documentation, it likely plays a crucial role in generating a comprehensive README for the AI model, possibly summarizing its behavior, functionalities, or outcomes. As such, this script appears to be responsible for managing critical components of the abstract_ai Python module's graphic user interface, specifically focusing on events related to generating README files.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder.py
+ dubbed with the title: Abstract_AI_InstructionBuilder_Module_Description
+ was described as: The script "InstructionBuilder.py" in Abstract_AI Python module contains a class "InstructionManager" which is used for managing user's instructions. This includes a set of default instructions and methods for handling and utilizing these instructions such as creating new instructions, updating existing ones, getting the current instructions and adding new ones. The instructions consist of instructions text, example values, and a default state of execution. This utility seems to be the core part of structuring user’s responses in a specified format and controlling the API call behavior.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionBuilder_nogui.py
+ dubbed with the title: abstract_ai_instructionBuilder_py_module_chunk1
+ was described as: The provided script is a small chunk of the "InstructionBuilder.py" file found in the "instruction_selection" folder from the "gpt_classes" subdirectory within the "abstract_ai" Python module. It includes a function named "text_to_key", which accepts two parameters: text and section.\n\nThis function appears to transform a text description into a GUI key, primarily based on the section input parameter. The function removes the spaces from the text description and replaces them with underscores, converts the resultant string to uppercase, and then concatenates it with the section name (delimited by an underscore), thereby forming a key string.The produced key string can be used as an identifying key for user interface elements in the graphical user interface (GUI) of the module, ensuring each component is uniquely identifiable for user interaction, state updates, or referencing. This function might be critical in setting up the GUI for the "abstract_ai" module.
+
+/n/n in the script: src/abstract_ai/gpt_classes/instruction_selection/InstructionManager_nogui.py
+ dubbed with the title: Import_of_Data_Processing_Functions_in_Abstract_AI_Module
+ was described as: The provided script chunk is part 1 of 17 from an unspecified file within the abstract_ai Python module. It imports 'get_actual_number' and 'eatAll' functions from abstract_utilities. Additionally, it imports 'is_bool' function from the type_utils module, present within abstract_utilities. These imported functions suggest the script deals with processing and type checking of input data. 'get_actual_number' likely assists in processing numerical data, 'eatAll' might help in data consumption or parsing, while 'is_bool' is useful in checking boolean data types. While we lack the full context to assess the script's entire functionality, from this isolated chunk, we can infer that it is designed to handle and process various types of data, possibly in preparation for interactions with the OpenAI GPT-3 API.
+
+/n/n
+
+please overview the script provided in the chunk_data and derive a description/summary of the script as it relates to the module; this will later be amalgamated with the various portions of the whole module descriptions to create a comprehensive readme
+
+-----------------------------------------------------------------------------
+#chunk_data#
+
+this is chunk 1 of 1
+
+from .InstructionBuilder import *
+from .InstructionBuilder_nogui import *
+ was described as: This is the reply to your request.
+
+/n/n
+
+please overview the script provided in the chunk_data and derive a description/summary of the script as it relates to the module; this will later be amalgamated with the various portions of the whole module descriptions to create a comprehensive readme
+
+-----------------------------------------------------------------------------
+#chunk_data#
+
+this is chunk 1 of 8
+
+class ModelManager:
+    """
+    This class manages the selection and querying of models available for use.
+ was described as: This is the reply to your request.
+
+/n/n
+
+please overview the script provided in the chunk_data and derive a description/summary of the script as it relates to the module; this will later be amalgamated with the various portions of the whole module descriptions to create a comprehensive readme
+
+-----------------------------------------------------------------------------
+#chunk_data#
+
+this is chunk 1 of 1
+
+from .ModelBuilder import ModelManager
+ was described as: This is the reply to your request.
+

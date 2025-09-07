@@ -1,0 +1,4 @@
+ in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/query_events.py
+ dubbed with the title: abstract_ai_module_query_event_check_function
+ was described as: The provided script is a part of an unknown python file within the abstract_ai Python module. The file contains a definition for the function \'query_event_check\'. This function checks if a query event has been triggered; if so, and no submission is currently in progress, it initiates a new API query. This is accomplished by creating a new API call name, and submitting the coroutine to the event loop. The function then attaches a callback function to handle the future result of the coroutine. If a submission is already in progress, it logs an information message stating "Submission already in progress." If another event type is detected, it simply returns false. This function is presumably part of a class handling the communication and management of API queries to the OpenAI GPT-3 API.
+

@@ -1,0 +1,6 @@
+ in the script: src/abstract_ai/gpt_classes/gpt_manager/response_section/progress_display.py
+ dubbed with the title: abstract_ai_Progress_Display_Methods
+ was described as: The provided script defines two methods within an unidentified Python class, likely part of the 'abstract_ai' module. These methods, 'get_dots' and 'update_progress_chunks', are intended to update the progress bar and status in the Graphical User Interface (GUI) as the module processes chunks of data in its interaction with the GPT-3 API.
+
+The 'get_dots' method manages a dynamic visual display of progress, while 'update_progress_chunks' manages the progress bar and text status in the UI depending on the number of chunks processed. If the process is completed, it updates the UI with a sent status and re-enables the 'SUBMIT_QUERY' button. This script contributes significantly towards enabling the user to track and understand the status of their queries with the OpenAI GPT-3 API.
+
