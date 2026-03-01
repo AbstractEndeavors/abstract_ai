@@ -25,7 +25,7 @@ def get_encoder(model_name: str = "gpt-4", encoding_name: Optional[str] = None):
 
 def count_tokens(text: str, encoder) -> int:
     """Count how many tokens `text` encodes to."""
-    return len(encoder.encode(text))
+    return len(encoder.encode(str(text)))
 
 def recursive_chunk(
     text: str,

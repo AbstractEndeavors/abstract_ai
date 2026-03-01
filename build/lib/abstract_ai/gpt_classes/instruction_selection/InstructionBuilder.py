@@ -1,3 +1,4 @@
+from ..imports import *
 from abstract_utilities import get_actual_number, eatAll
 from abstract_utilities.type_utils import is_bool
 import json
@@ -32,9 +33,40 @@ def get_dict_from_instruction(instructions):
                 new_instruction.update({key:instructions[key]})
                 new_instructions[key] = new_instruction
     return new_instructions
+def make_instructions(**kwargs):
+    """
+    Normalize instruction entries so each includes:
+    - instruction
+    - example
+    - default
+    """
+    normalized = {}
 
+    for key, value in kwargs.items():
+        entry = {
+            "instruction": "",
+            "example": "",
+            "default": True
+        }
+
+        if isinstance(value, str):
+            entry["instruction"] = value
+            entry["example"] = f"Example for {key}"
+        elif isinstance(value, dict):
+            entry.update(value)
+        else:
+            raise TypeError(f"Invalid instruction type for key {key}")
+
+        # Ensure required keys
+        entry.setdefault("instruction", key)
+        entry.setdefault("example", f"Place {key} example here")
+        entry.setdefault("default", True)
+
+        normalized[key] = entry
+
+    return normalized
 class InstructionManager:
-    def __init__(self, instructions=None, instruction_bools=None) -> None:
+    def __init__(self, instructions=None, instruction_bools=None,**kwargs) -> None:
         instruction_bools = instruction_bools or {}
         self.default_instructions = {
             "api_response": {
@@ -98,15 +130,16 @@ class InstructionManager:
             for key in self.default_instructions
             if self.default_instructions[key].get("default")
         })
-
+        self.update_default_instructions(**kwargs)
     def get_instructions(self, instruction_number: int = None) -> dict:
         if not self.instructions or self.instructions == [[]]:
             self.add_instructions()
         instruction_number = instruction_number if instruction_number is not None else -1
         return self.instructions[instruction_number]
 
-    def update_default_instructions(self, data):
-        self.default_instructions.update(get_dict_from_instruction(data))
+    def update_default_instructions(self, **data):
+        data = make_instructions(**data)
+        self.default_instructions.update(data)
         self.update_instructions(0, **{
             key: self.default_instructions[key]
             for key in self.default_instructions
@@ -129,33 +162,39 @@ class InstructionManager:
 
     def get_instructions_text(self, instructions_js: dict) -> tuple[str, dict]:
         """
-        Retrieves instructions and example dictionary for the conversation.
-
-        Args:
-            instructions_js: Dictionary of instruction text values.
-
-        Returns:
-            Tuple of (instructions string, example dictionary).
+        Build a combined instruction text similar to Jake’s preferred style.
         """
-        instructions = ""
+        instructions = (
+            "You MUST return a JSON dictionary with the following keys.\n"
+            "Do NOT include commentary, markdown, code blocks, or text outside the JSON.\n"
+            "Booleans must be lowercase (true/false).\n\n"
+            "==============================\n"
+            "FIELD DEFINITIONS\n"
+            "==============================\n\n"
+        )
+
         example_format = {}
-        if instructions_js:
-            instructions = (
-                "Your response is expected to be in JSON format, with boolean responses as lowercase unquoted values (true/false), "
-                "using the following keys:\n\n"
-            )
-            for i, key in enumerate(instructions_js.keys()):
-                if key in self.default_instructions:
-                    instructions += f'{i}) {key} - """{eatAll(instructions_js[key], ["\'"])}"""\n'
-                    example_value = self.default_instructions[key]["example"]
-                    # Ensure JSON-compliant booleans
-                    if isinstance(example_value, bool):
-                        example_value = str(example_value).lower()
-                    example_format[key] = example_value
-            instructions += (
-                "\nBelow is an example of the expected JSON dictionary response format, with default inputs. "
-                "This response MUST be a dict:\n" + json.dumps(example_format, indent=2)
-            )
+
+        for key, cfg in instructions_js.items():
+            inst = eatAll(cfg.get("instruction", ""), ["'"])
+            ex = cfg.get("example")
+
+            instructions += f"{key}:\n"
+            instructions += f"  - Instruction: {inst}\n"
+            if ex:
+                instructions += f"  - Example: \"{ex}\"\n"
+            instructions += "\n"
+
+            # Prepare example block
+            example_format[key] = ex if not isinstance(ex, bool) else str(ex).lower()
+
+        instructions += (
+            "\n==============================\n"
+            "JSON FORMAT EXAMPLE\n"
+            "==============================\n\n"
+        )
+        instructions += json.dumps(example_format, indent=2)
+
         return instructions, example_format
 
     def add_instructions(self, all_true: bool = False, **kwargs) -> None:
@@ -190,6 +229,7 @@ class InstructionManager:
         return instruction_display, instruction_bools, instructions_text_values, instructions_text, example_format
 
     def update_instructions(self, instruction_number: int = 0, **kwargs) -> None:
+        
         instruction_display, instruction_bools, instructions_text_values, instructions_text, example_format = (
             self.get_instructions_values(**kwargs)
         )
@@ -221,3 +261,10 @@ class InstructionManager:
                 "error": f"Failed to parse JSON response: {str(e)}",
                 "raw_response": response
             }
+
+def get_quick_instructions(**kwargs):
+    inst_mgr = InstructionManager(**kwargs)
+    return inst_mgr.get_instructions().get("instructions_text")
+
+def get_image_instructions_text():
+    return get_quick_instructions(**IMAGE_INSTRUCTION_KEYS)
