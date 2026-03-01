@@ -55,3 +55,4 @@ class ApiManager:
         """
         return {'Content-Type': self.content_type, 'Authorization': f'Bearer {self.api_key}'}
     
+
