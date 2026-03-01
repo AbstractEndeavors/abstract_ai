@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: abstract_ai
-Version: 0.2.1.171
+Version: 0.2.1.172
 Summary: abstract_ai is a Python module that serves as a bridge between your application and the OpenAI GPT-3 API. It provides a convenient interface for sending requests, managing responses, and controlling the behavior of the API calls. This module is highly customizable, allowing you to establish prompts, instructions, and response handling logic.
 Home-page: https://github.com/AbstractEndeavors/abstract_ai
 Author: putkoff
@@ -12,6 +12,8 @@ Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.11
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn
+Requires-Dist: abstract_solcatcher_database
 Requires-Dist: abstract_database
 Requires-Dist: abstract_security>=0.0.1
 Requires-Dist: abstract_webtools>=0.1.4.90

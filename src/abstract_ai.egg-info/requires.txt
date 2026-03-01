@@ -1,3 +1,5 @@
+scikit-learn
+abstract_solcatcher_database
 abstract_database
 abstract_security>=0.0.1
 abstract_webtools>=0.1.4.90
